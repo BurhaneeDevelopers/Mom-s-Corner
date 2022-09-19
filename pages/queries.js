@@ -5,8 +5,15 @@ import { SiBuymeacoffee } from "react-icons/si";
 import { BsWhatsapp } from "react-icons/bs";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
+import imageUrlBuilder from "@sanity/image-url";
 
 const Queries = ({ faqs }) => {
+  const client = createClient({
+    projectId: "r6hwcp84",
+    dataset: "production",
+    useCdn: false,
+  });
+  const builder = imageUrlBuilder(client);
   return (
     <>
       <section className="min-h-screen bg-white">
@@ -78,14 +85,15 @@ const Queries = ({ faqs }) => {
             </div>
 
             <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10">
-              <Image
-                width={400}
-                height={400}
-                className="hidden object-cover object-top mx-auto rounded-full lg:block shrink-0 w-96 h-96"
-                src="/whatsapp-img.jpg"
-                alt=""
-              />
-
+              <div
+                className="bg-cover w-56 h-56 rounded-full"
+                style={{
+                  backgroundImage: `url(${builder
+                    .image(faqs.faqimage)
+                    .width(200)
+                    .url()})`,
+                }}
+              ></div>
               <div className="mt-6 space-y-8 md:mt-8">
                 <p className="flex items-start -mx-2">
                   <svg
@@ -187,7 +195,13 @@ const Queries = ({ faqs }) => {
               return (
                 <div key={item.slug.current}>
                   <div className="grid p-3 rounded-lg">
-                    <Image className="object-contain" src="/logo.png" width={200} height={120}  alt="logo" />
+                    <Image
+                      className="object-contain"
+                      src="/logo.png"
+                      width={200}
+                      height={120}
+                      alt="logo"
+                    />
                   </div>
 
                   <div>

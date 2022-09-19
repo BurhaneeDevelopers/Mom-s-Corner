@@ -1,7 +1,6 @@
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-// import Image from "next/image";
 
 const Slug = ({ blog }) => {
   const client = createClient({

@@ -38,9 +38,20 @@ const About = ({ about }) => {
                     placeholder="Email Address"
                   />
 
-                  <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-300 transform bg-indigo-600 rounded lg:w-auto lg:mx-4 hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
-                    Subscribe
-                  </button>
+                  <form
+                    action="https://formsubmit.co/cornersmom53@gmail.com"
+                    method="POST"
+                  >
+                    <input type="hidden" name="_captcha" value="false"></input>
+                    <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-300 transform bg-indigo-600 rounded lg:w-auto lg:mx-4 hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
+                      Subscribe
+                    </button>
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value="http://localhost:3000/success"
+                    ></input>
+                  </form>
                 </div>
               </div>
             </div>
@@ -73,9 +84,7 @@ const About = ({ about }) => {
                   />
                 </div>
 
-                <div
-                  className="flex flex-col sm:flex-row mt-10"
-                >
+                <div className="flex flex-col sm:flex-row mt-10">
                   <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                     <div
                       className="w-20 h-20 rounded-full bg-cover inline-flex items-center justify-center bg-gray-200 text-gray-400"

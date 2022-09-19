@@ -33,7 +33,7 @@ const Blogs = ({ blogs }) => {
 
                     <div>
                       <p className="mt-6 text-sm text-indigo-500 uppercase">
-                        Sarrah Bharmal
+                        Updated By Sarrah Bharmal on {item.CreatedAt}
                       </p>
 
                       <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
@@ -81,10 +81,22 @@ const Blogs = ({ blogs }) => {
               })}
             </div>
 
-            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] hidden lg:inline-block overflow-y-auto">
+            <hr className="flex bg-pink-500 mt-5" />
+
+            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
+              <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
               {blogs.map((item) => {
                 return (
                   <div key={item.slug.title} className="flex mb-5">
+                    <div
+                      className="bg-cover w-12 h-12 rounded-full m-2"
+                      style={{
+                        backgroundImage: `url(${builder
+                          .image(item.blogimage)
+                          .width(200)
+                          .url()})`,
+                      }}
+                    ></div>
                     <div>
                       <h3 className="text-indigo-500 capitalize">
                         {item.title}
@@ -102,7 +114,6 @@ const Blogs = ({ blogs }) => {
                 );
               })}
             </div>
-
           </div>
         </div>
       </section>
