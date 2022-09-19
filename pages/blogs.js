@@ -20,8 +20,7 @@ const Blogs = ({ blogs }) => {
             <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
               {blogs.map((item) => {
                 return (
-                  <div className="mb-16">
-                  
+                  <div key={item.slug.title} className="mb-16">
                     <div
                       className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
                       style={{
@@ -42,23 +41,24 @@ const Blogs = ({ blogs }) => {
                       </h1>
 
                       <div className="flex items-center mt-6">
-                        <img
-                          className="object-cover object-top w-10 h-10 rounded-full"
-                          src="/whatsapp-img.jpg"
-                          alt=""
-                        />
+                        <div
+                          className="bg-cover w-12 h-12 rounded-full"
+                          style={{
+                            backgroundImage: `url(${builder
+                              .image(item.blogprofileimage)
+                              .width(200)
+                              .url()})`,
+                          }}
+                        ></div>
 
                         <div className="mx-4">
                           <h1 className="text-sm text-gray-700">
                             {item.metadesc}
                           </h1>
                           <PortableText
-                            // Pass in block content straight from Sanity.io
                             content={item.content}
                             projectId="r6hwcp84"
                             dataset="production"
-                            // Optionally override marks, decorators, blocks, etc. in a flat
-                            // structure without doing any gymnastics
                             serializers={{
                               h1: (props) => (
                                 <h1 style={{ color: "" }} {...props} />
@@ -84,7 +84,7 @@ const Blogs = ({ blogs }) => {
             <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
               {blogs.map((item) => {
                 return (
-                  <div className="flex mb-5">
+                  <div key={item.slug.title} className="flex mb-5">
                     <div>
                       <h3 className="text-indigo-500 capitalize">
                         {item.title}

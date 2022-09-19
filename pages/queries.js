@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
@@ -10,9 +9,6 @@ import PortableText from "react-portable-text";
 const Queries = ({ faqs }) => {
   return (
     <>
-      <Head>
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-      </Head>
       <section className="min-h-screen bg-white">
         <div className="container px-6 lg:px-28 py-10 mx-auto">
           <div className="lg:flex lg:items-center lg:-mx-10">
@@ -39,7 +35,8 @@ const Queries = ({ faqs }) => {
                     <input
                       name="Name"
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="Your Name"
+                      required
                       className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
@@ -51,7 +48,8 @@ const Queries = ({ faqs }) => {
                     <input
                       name="Email"
                       type="email"
-                      placeholder="johndoe@example.com"
+                      placeholder="YourEmail@example.com"
+                      required
                       className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
@@ -63,11 +61,16 @@ const Queries = ({ faqs }) => {
                   </label>
                   <textarea
                     name="Message"
+                    required
                     className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-560  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Message"
                   ></textarea>
                 </div>
-
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="http://localhost:3000/success"
+                ></input>
                 <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
                   get in touch
                 </button>
@@ -133,6 +136,7 @@ const Queries = ({ faqs }) => {
                 <div className="flex mt-4 -mx-1.5 ">
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-gray-600 transition-colors duration-300 transform hover:text-indigo-700"
                     href="https://www.buymeacoffee.com/MomsCorner"
                   >
@@ -141,6 +145,7 @@ const Queries = ({ faqs }) => {
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-gray-600 transition-colors duration-300 transform hover:text-indigo-700"
                     href=" https://www.instagram.com/sarrah_aliasgar/"
                   >
@@ -149,16 +154,18 @@ const Queries = ({ faqs }) => {
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-gray-600 transition-colors duration-300 transform hover:text-indigo-700"
-                    href="#"
+                    href="https://twitter.com/sarahbharmal"
                   >
                     <AiOutlineTwitter className="w-full h-full text-xl" />
                   </a>
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-gray-600 transition-colors duration-300 transform hover:text-indigo-700"
-                    href="tel:99406 11281"
+                    href="tel:9940611281"
                   >
                     <BsWhatsapp className="w-full h-full text-xl" />
                   </a>
@@ -169,32 +176,47 @@ const Queries = ({ faqs }) => {
         </div>
       </section>
 
-      <section class="bg-gradient-to-r from-pink-200 to-pink-100">
-        <div class="container px-6 py-12 mx-auto">
-          <h1 class="text-2xl font-semibold text-gray-800 lg:text-4xl">
+      <section className="bg-gradient-to-r from-pink-200 to-pink-100 mb-16">
+        <div className="container px-6 py-12 mx-auto">
+          <h1 className="text-2xl text-center font-semibold text-indigo-700 lg:text-4xl">
             Frequently asked questions.
           </h1>
 
-          <div class="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3">
-            <div>
-              <div class="flex p-3 rounded-lg">
-                <img src="/logo.png" className="w-1/2" alt="" srcset="" />
-              </div>
+          <div className="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3">
+            {faqs.map((item) => {
+              return (
+                <div key={item.slug.current}>
+                  <div className="grid p-3 rounded-lg">
+                    <Image className="object-contain" src="/logo.png" width={200} height={120}  alt="logo" />
+                  </div>
 
-              <div>
-                <h1 class="text-xl font-semibold text-gray-700">
-                  What can i expect at my first consultation?
-                </h1>
+                  <div>
+                    <h1 className="text-xl font-semibold text-center text-indigo-600">
+                      {item.title}
+                    </h1>
 
-                <p class="mt-2 text-sm text-gray-500 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident placeat, consequatur eveniet veritatis quos
-                  dignissimos beatae dolores exercitationem laboriosam officia
-                  magnam atque blanditiis illum doloremque magni ex corrupti
-                  tempora quis.
-                </p>
-              </div>
-            </div>
+                    <span className="mt-2 text-sm text-gray-500 text-center">
+                      <PortableText
+                        // Pass in block content straight from Sanity.io
+                        content={item.content}
+                        projectId="r6hwcp84"
+                        dataset="production"
+                        // Optionally override marks, decorators, blocks, etc. in a flat
+                        // structure without doing any gymnastics
+                        serializers={{
+                          h1: (props) => (
+                            <h1 style={{ color: "" }} {...props} />
+                          ),
+                          li: ({ children }) => (
+                            <li className="special-list-item">{children}</li>
+                          ),
+                        }}
+                      />
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

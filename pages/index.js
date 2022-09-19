@@ -6,7 +6,6 @@ import {
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { MdLocationPin } from "react-icons/md";
 import { SiBuymeacoffee } from "react-icons/si";
 import { BsFillTelephoneFill, BsWhatsapp } from "react-icons/bs";
 import { createClient } from "next-sanity";
@@ -28,8 +27,8 @@ export default function Home({ blogs }) {
           <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-4xl text-[2rem] md:text-[3.3em] mb-4 font-medium text-9xll text-indigo-700">
-                Welcome to " <span className="text-pink-800">Mom's</span> Corner
-                "
+                Welcome to &quot; <span className="text-pink-800">Mom&apos;s</span> Corner
+                &quot;
               </h1>
               <p className="mb-8 leading-relaxed md:text-xl text-black">
                 Eager to share everything I learn about raising a healthy, happy
@@ -37,7 +36,6 @@ export default function Home({ blogs }) {
               </p>
 
               <div className="md:flex w-full md:justify-start justify-center items-end">
-
                 <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
                   <label
                     htmlFor="hero-field"
@@ -53,17 +51,15 @@ export default function Home({ blogs }) {
                   />
                 </div>
 
-                <Link href={'/blogs'}>
-                <button className="inline-flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg">
-                  <AiOutlineSearch className="mt-1" /> &nbsp; Search
-                </button>
+                <Link href={"/blogs"}>
+                  <button className="inline-flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg">
+                    <AiOutlineSearch className="mt-1" /> &nbsp; Search
+                  </button>
                 </Link>
               </div>
               <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
-                We care about your data. See our{" "}
-                <a href="" className="text-pink-500 font-bold underline">
-                  Privacy Policy
-                </a>
+                <span className="font-bold">NOTE:</span> The blog is not written
+                by a proffessional person yet an experienced mother !
               </p>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-cover bg-center rounded -mt-10">
@@ -102,7 +98,7 @@ export default function Home({ blogs }) {
                   className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl"
                 >
                   <span className="inline-block rounded-full">
-                    <img src="/logo.ico" alt="mom's corner" className="w-32" />
+                    <Image src="/logo.ico" alt="mom's corner" width={150} height={100} />
                   </span>
 
                   <h1 className="text-2xl font-semibold text-gray-700 capitalize">
@@ -110,17 +106,17 @@ export default function Home({ blogs }) {
                   </h1>
 
                   <span className="text-gray-500">
-                  <PortableText
-                    content={item.content}
-                    projectId="r6hwcp84"
-                    dataset="production"
-                    serializers={{
-                      h1: (props) => <h1 style={{ color: "" }} {...props} />,
-                      li: ({ children }) => (
-                        <li className="special-list-item">{children}</li>
-                      ),
-                    }}
-                  />
+                    <PortableText
+                      content={item.content}
+                      projectId="r6hwcp84"
+                      dataset="production"
+                      serializers={{
+                        h1: (props) => <h1 style={{ color: "" }} {...props} />,
+                        li: ({ children }) => (
+                          <li className="special-list-item">{children}</li>
+                        ),
+                      }}
+                    />
                   </span>
 
                   <a
@@ -170,6 +166,7 @@ export default function Home({ blogs }) {
               Support me in my journey of a blog writing by{" "}
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.buymeacoffee.com/MomsCorner"
                 className="underline hover:decoration-double font-bold text-indigo-600"
               >
@@ -199,7 +196,6 @@ export default function Home({ blogs }) {
               </p>
 
               <div className="mt-6 space-y-8 md:mt-8">
-
                 <p className="flex items-start -mx-2">
                   <BsFillTelephoneFill className="mt-1" />
                   <span className="mx-2 text-white truncate w-72">
@@ -221,6 +217,7 @@ export default function Home({ blogs }) {
                 <div className="flex mt-4 -mx-1.5 ">
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
                     href="https://www.buymeacoffee.com/MomsCorner"
                   >
@@ -229,6 +226,7 @@ export default function Home({ blogs }) {
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
                     href=" https://www.instagram.com/sarrah_aliasgar/"
                   >
@@ -237,16 +235,18 @@ export default function Home({ blogs }) {
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
-                    href="#"
+                    href="https://twitter.com/sarahbharmal"
                   >
                     <AiOutlineTwitter className="w-full h-full text-xl" />
                   </a>
 
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
-                    href="tel:99406 11281"
+                    href="tel:9940611281"
                   >
                     <BsWhatsapp className="w-full h-full text-xl" />
                   </a>
@@ -255,7 +255,7 @@ export default function Home({ blogs }) {
             </div>
 
             <div className="mt-8 lg:w-1/2 lg:mx-6">
-              <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl lg:max-w-xl">
+              <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-pink-50 shadow-2xl rounded-xl lg:max-w-xl">
                 <h1 className="text-2xl font-medium text-gray-700">
                   Contact Me
                 </h1>
@@ -273,7 +273,8 @@ export default function Home({ blogs }) {
                     <input
                       type="text"
                       name="Name"
-                      placeholder="Tony Stark"
+                      placeholder="Your Name"
+                      required
                       className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                     />
                   </div>
@@ -285,7 +286,8 @@ export default function Home({ blogs }) {
                     <input
                       type="email"
                       name="Email"
-                      placeholder="example@example.com"
+                      placeholder="YourEmail@example.com"
+                      required
                       className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                     />
                   </div>
@@ -300,7 +302,11 @@ export default function Home({ blogs }) {
                       placeholder="Enter Your Message Here"
                     ></textarea>
                   </div>
-
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="http://localhost:3000/success"
+                  ></input>
                   <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-opacity-50">
                     get in touch
                   </button>
@@ -318,12 +324,11 @@ export async function getServerSideProps(context) {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
-    apiVersion: '2021-10-21',
+    apiVersion: "2021-10-21",
     useCdn: false,
   });
   const query = `*[_type == "blog"]`;
   const blogs = await client.fetch(query);
-  // console.log(blogs.lentgh)
   return {
     props: {
       blogs,

@@ -1,10 +1,8 @@
-// import { useRouter } from "next/router";
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
+// import Image from "next/image";
 
-// const router = useRouter();
-// const { slug } = router.query;
 const Slug = ({ blog }) => {
   const client = createClient({
     projectId: "r6hwcp84",
@@ -17,7 +15,6 @@ const Slug = ({ blog }) => {
     <>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
-
           <div className="lg:flex lg:-mx-6">
             <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
               <div className="">
@@ -51,17 +48,76 @@ const Slug = ({ blog }) => {
                     }}
                   />
                   <div className="flex items-center mt-6">
-                    <img
-                      className="object-cover object-center w-10 h-10 rounded-full"
-                      src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                      alt=""
-                    />
+                    <div
+                    className="bg-cover w-12 h-12 rounded-full"
+                      style={{
+                        backgroundImage: `url(${builder
+                          .image(blog.blogprofileimage)
+                          .width(200)
+                          .url()})`,
+                      }}
+                    ></div>
 
                     <div className="mx-4">
                       <h1 className="text-sm text-gray-700">Sarrah Bharmal</h1>
                       <p className="text-sm text-gray-500">Women</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="comment mt-16">
+                  <h1 className="text-indigo-500 text-xl">
+                    Comment your feedback or ask any doubts related to this blog
+                  </h1>
+                  <form
+                    action="https://formsubmit.co/cornersmom53@gmail.com"
+                    method="post"
+                  >
+                    <input type="hidden" name="_captcha" value="false"></input>
+                    <div className="flex-1 px-2 w-1/2 mt-5">
+                      <label className="block mb-2 text-sm text-gray-600 ">
+                        Full Name
+                      </label>
+                      <input
+                        name="Name"
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-pink-100 border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      />
+                    </div>
+                    <div className="flex-1 px-2 w-1/2 mt-5">
+                      <label className="block mb-2 text-sm text-gray-600 ">
+                        Email Address
+                      </label>
+                      <input
+                        name="Email"
+                        type="email"
+                        placeholder="YourEmail@example.com"
+                        required
+                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-pink-100 border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      />
+                    </div>
+                    <div className="w-1/2 mt-5">
+                      <label className="block mb-2 text-sm text-gray-600 ">
+                        Feedback/Doubts
+                      </label>
+                      <textarea
+                        name="Feedback/Doubts"
+                        required
+                        className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-pink-100 border border-gray-200 rounded-md md:h-560  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value="http://localhost:3000/success"
+                    ></input>
+                    <button className="w-1/2 px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                      Submit Your Message
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>

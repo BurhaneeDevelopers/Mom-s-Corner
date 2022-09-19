@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 
@@ -66,6 +66,7 @@ export default function Example() {
         <Link href={"https://www.buymeacoffee.com/MomsCorner"}>
           <a
             target="_blank"
+            rel="noreferrer"
             className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900"
           >
             BuymeaCoffee
@@ -85,9 +86,11 @@ export default function Example() {
             variant="small"
             className="mr-4 cursor-pointer font-normal"
           >
+            <Link href={'/'} className="cursor-pointer">
             <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <img src="/logo.png" className="md:w-48 w-72" alt="Logo" />
+              <Image src="/logo.png" className="md:w-48" width={200} height={150} alt="Logo" />
             </div>
+            </Link>
           </Typography>
           <div className="hidden lg:flex">{navList}</div>
           <Link href={"/blogs"}>
@@ -148,59 +151,3 @@ export default function Example() {
     </div>
   );
 }
-
-// import React from "react";
-// import { AiOutlineArrowRight } from "react-icons/ai";
-// import { GiHamburgerMenu } from "react-icons/gi";
-// import Link from "next/link";
-
-// const Navbar = () => {
-//   return (
-//     <div className="main bg-gradient-to-r from-pink-300 to-pink-200">
-//       <header className="text-gray-600 body-font pl-1 md:px-5">
-//         <div className="container mx-auto flex-wrap flex-col flex md:flex-row items-center ">
-//             <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-//               <img src="/logo.png" className="md:w-48 w-72" alt="Logo" />
-//             </a>
-//             <nav className="md:ml-12 md:mx-auto flex flex-wrap text-base lg:flex xl:ml-96">
-//               <Link href={"/"}>
-//                 <a className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900">
-//                   Home
-//                 </a>
-//               </Link>
-//               <Link href={"/about"}>
-//                 <a className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900">
-//                   About Us
-//                 </a>
-//               </Link>
-//               <Link href={"/queries"}>
-//                 <a className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900">
-//                   Queries
-//                 </a>
-//               </Link>
-//               <Link href={"https://www.buymeacoffee.com/MomsCorner"}>
-//                 <a
-//                   target="_blank"
-//                   className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900"
-//                 >
-//                   BuyMeaCoffee
-//                 </a>
-//               </Link>
-//             </nav>
-//             <Link href={"/blogs"}>
-//               <button className="inline-flex items-center bg-pink-400 border-0 py-2 px-4 focus:outline-none hover:bg-pink-500 text-white rounded text-base mt-4 md:mt-0 ">
-//                 Blogs &nbsp;
-//                 <AiOutlineArrowRight />
-//               </button>
-//             </Link>
-
-//         </div>
-//         <div className="flex md:hidden justify-center">
-//           <GiHamburgerMenu className="text-2xl"/>
-//         </div>
-//       </header>
-//     </div>
-//   );
-// };
-
-// export default Navbar;

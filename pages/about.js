@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -62,9 +61,8 @@ const About = ({ about }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-col">
           {about.map((item) => {
-            // console.log(item.slug.current)
             return (
-              <div className="lg:w-4/6 mx-auto">
+              <div key={item.slug.current} className="lg:w-4/6 mx-auto">
                 <div className="rounded-lg h-96 overflow-hidden">
                   <Image
                     width={1000}
@@ -76,7 +74,6 @@ const About = ({ about }) => {
                 </div>
 
                 <div
-                  key={item.slug.current}
                   className="flex flex-col sm:flex-row mt-10"
                 >
                   <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -102,7 +99,7 @@ const About = ({ about }) => {
                       {item.metadesc}
                     </p>
                     <Link
-                      href={"/blog/" + item.slug.current}
+                      href={"/blogs"}
                       className="text-indigo-500 inline-flex items-center"
                     >
                       <div className="text-indigo-500 inline-flex items-center cursor-pointer">
@@ -142,7 +139,6 @@ export async function getServerSideProps(context) {
   });
   const query = `*[_type == "about"]`;
   const about = await client.fetch(query);
-  // console.log(blogs.lentgh)
   return {
     props: {
       about,
