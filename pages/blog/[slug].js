@@ -59,7 +59,7 @@ const Slug = ({ blog }) => {
 
                     <div className="mx-4">
                       <h1 className="text-sm text-gray-700">Sarrah Bharmal</h1>
-                      <p className="text-sm text-gray-500">Women</p>
+                      <p className="text-sm text-gray-500"> {blog.category}</p>
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const Slug = ({ blog }) => {
                     method="post"
                   >
                     <input type="hidden" name="_captcha" value="false"></input>
-                    <div className="flex-1 px-2 w-1/2 mt-5">
+                    <div className="flex-1 px-2 md:w-1/2 mt-5">
                       <label className="block mb-2 text-sm text-gray-600 ">
                         Full Name
                       </label>
@@ -85,7 +85,7 @@ const Slug = ({ blog }) => {
                         className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-pink-100 border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
                       />
                     </div>
-                    <div className="flex-1 px-2 w-1/2 mt-5">
+                    <div className="flex-1 px-2 md:w-1/2 mt-5">
                       <label className="block mb-2 text-sm text-gray-600 ">
                         Email Address
                       </label>
@@ -97,7 +97,7 @@ const Slug = ({ blog }) => {
                         className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-pink-100 border border-gray-200 rounded-md0  focus:border-indigo-400 focus:ring-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40"
                       />
                     </div>
-                    <div className="w-1/2 mt-5">
+                    <div className="md:w-1/2 mt-5">
                       <label className="block mb-2 text-sm text-gray-600 ">
                         Feedback/Doubts
                       </label>

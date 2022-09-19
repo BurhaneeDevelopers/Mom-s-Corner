@@ -71,7 +71,7 @@ const Blogs = ({ blogs }) => {
                             }}
                           />
                           <p className="text-sm text-gray-500">
-                            Lead Developer
+                            {item.category}
                           </p>
                         </div>
                       </div>
