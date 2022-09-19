@@ -58,8 +58,7 @@ export default function Home({ blogs }) {
                 </Link>
               </div>
               <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
-                <span className="font-bold">NOTE:</span> The blog is not written
-                by a proffessional person yet an experienced mother !
+                <span className="font-bold">Happy Reading !</span>
               </p>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-cover bg-center rounded -mt-10">

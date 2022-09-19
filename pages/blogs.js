@@ -81,7 +81,7 @@ const Blogs = ({ blogs }) => {
               })}
             </div>
 
-            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
+            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] hidden lg:inline-block overflow-y-auto">
               {blogs.map((item) => {
                 return (
                   <div key={item.slug.title} className="flex mb-5">
@@ -102,6 +102,7 @@ const Blogs = ({ blogs }) => {
                 );
               })}
             </div>
+
           </div>
         </div>
       </section>
