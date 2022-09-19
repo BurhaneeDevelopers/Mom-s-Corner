@@ -97,7 +97,7 @@ export default function Home({ blogs }) {
                   className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl"
                 >
                   <span className="inline-block rounded-full">
-                    <Image src="/logo.ico" alt="mom's corner" width={150} height={100} />
+                    <Image src="/logo.png" alt="mom's corner" width={150} height={100} />
                   </span>
 
                   <h1 className="text-2xl font-semibold text-gray-700 capitalize">
@@ -260,7 +260,7 @@ export default function Home({ blogs }) {
                 </h1>
 
                 <form
-                  action="https://formsubmit.co/cornersmom53@gmail.com"
+                  action="https://formsubmit.co/8fdd2ea16623ecc41fc7c2d3a2e5da7e"
                   method="POST"
                   className="mt-6"
                 >
@@ -304,7 +304,7 @@ export default function Home({ blogs }) {
                   <input
                     type="hidden"
                     name="_next"
-                    value="http://localhost:3000/success"
+                    value="https://momscorner.netlify.app//success"
                   ></input>
                   <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-opacity-50">
                     get in touch

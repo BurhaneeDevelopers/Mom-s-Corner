@@ -39,7 +39,7 @@ const About = ({ about }) => {
                   />
 
                   <form
-                    action="https://formsubmit.co/cornersmom53@gmail.com"
+                    action="https://formsubmit.co/8fdd2ea16623ecc41fc7c2d3a2e5da7e"
                     method="POST"
                   >
                     <input type="hidden" name="_captcha" value="false"></input>
@@ -49,7 +49,7 @@ const About = ({ about }) => {
                     <input
                       type="hidden"
                       name="_next"
-                      value="http://localhost:3000/success"
+                      value="https://momscorner.netlify.app//success"
                     ></input>
                   </form>
                 </div>

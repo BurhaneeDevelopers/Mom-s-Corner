@@ -69,7 +69,7 @@ const Slug = ({ blog }) => {
                     Comment your feedback or ask any doubts related to this blog
                   </h1>
                   <form
-                    action="https://formsubmit.co/cornersmom53@gmail.com"
+                    action="https://formsubmit.co/8fdd2ea16623ecc41fc7c2d3a2e5da7e"
                     method="post"
                   >
                     <input type="hidden" name="_captcha" value="false"></input>
@@ -111,7 +111,7 @@ const Slug = ({ blog }) => {
                     <input
                       type="hidden"
                       name="_next"
-                      value="http://localhost:3000/success"
+                      value="https://momscorner.netlify.app//success"
                     ></input>
                     <button className="w-1/2 px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
                       Submit Your Message

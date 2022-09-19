@@ -29,7 +29,7 @@ const Queries = ({ faqs }) => {
               </p>
 
               <form
-                action="https://formsubmit.co/cornersmom53@gmail.com"
+                action="https://formsubmit.co/8fdd2ea16623ecc41fc7c2d3a2e5da7e"
                 method="POST"
                 className="mt-12"
               >
@@ -76,7 +76,7 @@ const Queries = ({ faqs }) => {
                 <input
                   type="hidden"
                   name="_next"
-                  value="http://localhost:3000/success"
+                  value="https://momscorner.netlify.app//success"
                 ></input>
                 <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
                   get in touch
@@ -85,15 +85,13 @@ const Queries = ({ faqs }) => {
             </div>
 
             <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10">
-              <div
-                className="bg-cover w-56 h-56 rounded-full"
-                style={{
-                  backgroundImage: `url(${builder
-                    .image(faqs.faqimage)
-                    .width(200)
-                    .url()})`,
-                }}
-              ></div>
+              <Image
+                width={400}
+                height={400}
+                className="hidden object-cover object-top mx-auto rounded-full lg:block shrink-0 w-96 h-96"
+                src="/whatsapp-img.jpg"
+                alt=""
+              />
               <div className="mt-6 space-y-8 md:mt-8">
                 <p className="flex items-start -mx-2">
                   <svg
