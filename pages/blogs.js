@@ -104,7 +104,7 @@ const Blogs = ({ blogs }) => {
 
                       <Link
                         href={"/blog/" + item.slug.current}
-                        className="block mt-2 font-medium text-gray-700 hover:underline hover:text-black-500 "
+                        className="block mt-2 font-medium text-gray-700 hover:text-black-500 "
                       >
                         {item.metadesc}
                       </Link>

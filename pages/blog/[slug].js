@@ -1,6 +1,7 @@
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
 
 const Slug = ({ blog }) => {
   const client = createClient({
@@ -29,7 +30,7 @@ const Slug = ({ blog }) => {
 
                 <div>
                   <p className="mt-6 text-sm text-indigo-500 uppercase">
-                    Sarrah Bharmal
+                    Updated By Sarrah Bharmal on {blog.CreatedAt}
                   </p>
 
                   <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
@@ -48,7 +49,7 @@ const Slug = ({ blog }) => {
                   />
                   <div className="flex items-center mt-6">
                     <div
-                    className="bg-cover w-12 h-12 rounded-full"
+                      className="bg-cover w-12 h-12 rounded-full"
                       style={{
                         backgroundImage: `url(${builder
                           .image(blog.blogprofileimage)
@@ -120,19 +121,34 @@ const Slug = ({ blog }) => {
                 </div>
               </div>
             </div>
+
+            <hr className="flex bg-pink-500 mt-5" />
+
             <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
-              <div>
-                <h3 className="text-indigo-500 capitalize">{blog.title}</h3>
+              <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
+              <div className="flex">
+                <div
+                  className="bg-cover w-12 h-12 rounded-full m-2"
+                  style={{
+                    backgroundImage: `url(${builder
+                      .image(blog.blogimage)
+                      .width(200)
+                      .url()})`,
+                  }}
+                ></div>
+                <div>
+                  <h3 className="text-indigo-500 capitalize">{blog.title}</h3>
 
-                <a
-                  href={"/blog/" + blog.slug.current}
-                  className="block mt-2 font-medium text-gray-700 hover:underline hover:text-black-500 "
-                >
-                  {blog.metadesc}
-                </a>
+                  <Link
+                    href={"/blog/" + blog.slug.current}
+                    className="block mt-2 font-medium text-gray-700 hover:underline hover:text-black-500 "
+                  >
+                    {blog.metadesc}
+                  </Link>
+                </div>
+
+                <hr className="my-6 border-gray-200" />
               </div>
-
-              <hr className="my-6 border-gray-200" />
             </div>
           </div>
         </div>
