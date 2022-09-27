@@ -3,7 +3,7 @@ import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
 
-const Slug = ({ blog }) => {
+const Slug = ({ blog, blogs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
@@ -126,29 +126,34 @@ const Slug = ({ blog }) => {
 
             <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
               <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
-              <div className="flex">
-                <div
-                  className="bg-cover w-12 h-12 rounded-full m-2"
-                  style={{
-                    backgroundImage: `url(${builder
-                      .image(blog.blogimage)
-                      .width(200)
-                      .url()})`,
-                  }}
-                ></div>
-                <div>
-                  <h3 className="text-indigo-500 capitalize">{blog.title}</h3>
+              {blogs.map((item) => {
+                return (
+                  <div key={item.slug.title} className="flex mb-5">
+                    <div
+                      className="bg-cover w-12 h-12 rounded-full m-2"
+                      style={{
+                        backgroundImage: `url(${builder
+                          .image(item.blogimage)
+                          .width(200)
+                          .url()})`,
+                      }}
+                    ></div>
+                    <div>
+                      <h3 className="text-indigo-500 capitalize">
+                        {item.title}
+                      </h3>
 
-                  <Link
-                    href={"/blog/" + blog.slug.current}
-                    className="block mt-2 font-medium text-gray-700 hover:underline hover:text-black-500 "
-                  >
-                    {blog.metadesc}
-                  </Link>
-                </div>
-
-                <hr className="my-6 border-gray-200" />
-              </div>
+                      <Link
+                        href={"/blog/" + item.slug.current}
+                        className="block mt-2 font-medium text-gray-700 hover:text-black-500 "
+                      >
+                        {item.metadesc}
+                      </Link>
+                      <hr className="my-6 border-gray-200 dark:border-gray-700" />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -169,9 +174,12 @@ export const getServerSideProps = async (context) => {
   });
   const query = `*[_type == "blog" && slug.current == '${slug}'] [0]`;
   const blog = await client.fetch(query);
+  const queries = `*[_type == "blog"]`;
+  const blogs = await client.fetch(queries);
   return {
     props: {
       blog,
+      blogs,
     },
   };
 };
