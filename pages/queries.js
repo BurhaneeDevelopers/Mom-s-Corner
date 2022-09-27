@@ -171,7 +171,7 @@ const Queries = ({ faqs }) => {
                     target="_blank"
                     rel="noreferrer"
                     className="mx-1.5 text-gray-600 transition-colors duration-300 transform hover:text-indigo-700"
-                    href="tel:9940611281"
+                    href="https://wa.me/9940611281?text=Hi%20I%20found%20you%20on%20momcorners.com%20!"
                   >
                     <BsWhatsapp className="w-full h-full text-xl" />
                   </a>

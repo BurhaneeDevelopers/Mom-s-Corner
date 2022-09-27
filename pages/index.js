@@ -245,7 +245,7 @@ export default function Home({ blogs }) {
                     target="_blank"
                     rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
-                    href="tel:9940611281"
+                    href="https://wa.me/9940611281?text=Hi%20I%20found%20you%20on%20momcorners.com"
                   >
                     <BsWhatsapp className="w-full h-full text-xl" />
                   </a>
