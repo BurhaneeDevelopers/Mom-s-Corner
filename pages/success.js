@@ -5,7 +5,7 @@ const Success = () => {
   return (
     <div className="flex flex-col">
       <div className="text-center">
-        <Image src="/about-img.png" width={550} height={400} className=" mx-auto" alt="SUCCESS" />
+        <Image src="/about-img.png" width={550} height={400} className=" mx-auto" alt="Success" />
         <hr className="w-1/2 font-bold mx-auto bg-indigo-700"/>
         <br />
         <h1 className="text-xl">
