@@ -186,7 +186,7 @@ export default function Home({ blogs }) {
         <div className="container flex flex-col min-h-screen px-6 py-12 mx-auto">
           <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
             <div className="text-white lg:w-1/2 lg:mx-6">
-              <h1 className="text-3xl font-semibold capitalize lg:text-5xl">
+              <h1 className="text-3xl font-semibold capitalize lg:text-5xl text-indigo-600">
                 Contact Me
               </h1>
 
@@ -196,14 +196,14 @@ export default function Home({ blogs }) {
 
               <div className="mt-6 space-y-8 md:mt-8">
                 <p className="flex items-start -mx-2">
-                  <BsFillTelephoneFill className="mt-1" />
+                  <BsFillTelephoneFill className="mt-1 text-indigo-600" />
                   <span className="mx-2 text-white truncate w-72">
                     +91 99406 11281
                   </span>
                 </p>
 
                 <p className="flex items-start -mx-2">
-                  <AiOutlineMail className="mt-1" />
+                  <AiOutlineMail className="mt-1 text-indigo-600" />
                   <span className="mx-2 text-white truncate w-72">
                     cornersmom53@gmail.com
                   </span>
@@ -211,7 +211,7 @@ export default function Home({ blogs }) {
               </div>
 
               <div className="mt-6 md:mt-8">
-                <h3 className="text-gray-300 ">Follow me</h3>
+                <h3 className="text-gray-200 ">Follow me</h3>
 
                 <div className="flex mt-4 -mx-1.5 ">
                   <a
