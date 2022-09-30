@@ -41,13 +41,25 @@ const Blogs = ({ blogs }) => {
 
                     <div>
                       <p className="mt-6 text-sm text-indigo-500 uppercase">
-                        Updated By Sarrah Bharmal on {item.CreatedAt}
+                        Created By Sarrah Bharmal on {item.CreatedAt}
                       </p>
 
                       <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
                         {item.title}
                       </h1>
-
+                      <PortableText
+                        content={item.content}
+                        projectId="r6hwcp84"
+                        dataset="production"
+                        serializers={{
+                          h1: (props) => (
+                            <h1 style={{ color: "" }} {...props} />
+                          ),
+                          li: ({ children }) => (
+                            <li className="special-list-item">{children}</li>
+                          ),
+                        }}
+                      />
                       <div className="flex items-center mt-6">
                         <div
                           className="bg-cover w-12 h-12 rounded-full"
@@ -61,24 +73,10 @@ const Blogs = ({ blogs }) => {
 
                         <div className="mx-4">
                           <h1 className="text-sm text-gray-700">
-                            {item.metadesc}
+                            Sarrah Bharmal
                           </h1>
-                          <PortableText
-                            content={item.content}
-                            projectId="r6hwcp84"
-                            dataset="production"
-                            serializers={{
-                              h1: (props) => (
-                                <h1 style={{ color: "" }} {...props} />
-                              ),
-                              li: ({ children }) => (
-                                <li className="special-list-item">
-                                  {children}
-                                </li>
-                              ),
-                            }}
-                          />
                           <p className="text-sm text-gray-500">
+                            {" "}
                             {item.category}
                           </p>
                         </div>
@@ -122,7 +120,6 @@ const Blogs = ({ blogs }) => {
                 );
               })}
             </div>
-
           </div>
         </div>
       </section>
