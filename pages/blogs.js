@@ -2,6 +2,7 @@ import React from "react";
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import Head from "next/head";
 import Link from "next/link";
 
 const Blogs = ({ blogs }) => {
@@ -13,7 +14,14 @@ const Blogs = ({ blogs }) => {
   const builder = imageUrlBuilder(client);
 
   return (
-    <div>
+    <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6 ">
@@ -114,10 +122,11 @@ const Blogs = ({ blogs }) => {
                 );
               })}
             </div>
+
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

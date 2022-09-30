@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -14,7 +15,14 @@ const About = ({ about }) => {
   const builder = imageUrlBuilder(client);
 
   return (
-    <div>
+    <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <header className="bg-gradient-to-r from-pink-300 to-pink-200">
         <div className="container px-6 lg:px-12 py-16 mx-auto">
           <div className="items-center lg:flex lg:ml-28">
@@ -133,7 +141,7 @@ const About = ({ about }) => {
           })}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
