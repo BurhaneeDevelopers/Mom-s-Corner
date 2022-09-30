@@ -39,18 +39,18 @@ const About = ({ about }) => {
                 </p>
 
                 <div className="flex flex-col mt-8 space-y-3 lg:space-y-0 lg:flex-row">
-                  <input
-                    id="email"
-                    type="text"
-                    className="px-4 py-2 text-gray-700 bg-white border rounded focus:border-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-indigo-300"
-                    placeholder="Email Address"
-                  />
-
                   <form
                     action="https://formsubmit.co/8fdd2ea16623ecc41fc7c2d3a2e5da7e"
                     method="POST"
                   >
-                    <input type="hidden" name="_captcha" value="false"></input>
+                    <input type="hidden" name="_template" value="table" />
+                    <input
+                      type="email"
+                      name="Email-Subscriber"
+                      className="px-4 py-2 text-gray-700 bg-white border rounded focus:border-indigo-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-indigo-300"
+                      placeholder="Email Address"
+                    />
+                    <input type="hidden" name="_captcha" value="false" />
                     <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-300 transform bg-indigo-600 rounded lg:w-auto lg:mx-4 hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
                       Subscribe
                     </button>
@@ -58,7 +58,7 @@ const About = ({ about }) => {
                       type="hidden"
                       name="_next"
                       value="https://momscorner.netlify.app//success"
-                    ></input>
+                    />
                   </form>
                 </div>
               </div>
