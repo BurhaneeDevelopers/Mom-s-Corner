@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  AiOutlineSearch,
   AiOutlineMail,
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
-import { BsFillTelephoneFill, BsWhatsapp } from "react-icons/bs";
+import { BsFillTelephoneFill, BsWhatsapp, BsArrowRight } from "react-icons/bs";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import imageUrlBuilder from "@sanity/image-url";
@@ -25,37 +24,38 @@ export default function Home({ blogs }) {
       <div className="main bg-gradient-to-r from-pink-300 to-pink-200">
         <section className="text-gray-600 body-font px-5 mx-10">
           <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
-            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-[2rem] md:text-[3.3em] mb-4 font-medium text-9xll text-indigo-700">
-                Welcome to &quot; <span className="text-pink-800">Mom&apos;s</span> Corner
-                &quot;
+            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center space-y-3">
+              <h1 className="title-font sm:text-4xl text-[2rem] md:text-[3rem] mb-4 font-medium text-indigo-700">
+                Welcome to &quot;{" "}
+                <span className="text-pink-800 welcome-text">Mom&apos;s</span>{" "}
+                Corner &quot;
               </h1>
               <p className="mb-8 leading-relaxed md:text-xl text-black">
                 Eager to share everything I learn about raising a healthy, happy
                 child !
               </p>
 
-              <div className="md:flex w-full md:justify-start justify-center items-end">
-                <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
-                  <label
-                    htmlFor="hero-field"
-                    className="leading-7 text-sm md:text-lg text-indigo-600"
-                  >
-                    Search anything here :)
-                  </label>
-                  <input
-                    type="text"
-                    id="hero-field"
-                    name="hero-field"
-                    className="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-
-                <Link href={"/blogs"}>
-                  <button className="inline-flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg">
-                    <AiOutlineSearch className="mt-1" /> &nbsp; Search
-                  </button>
-                </Link>
+              <div className=" w-full md:justify-start justify-center items-end">
+                <p className="text-indigo-700">
+                  Explore Everything You Want :)
+                </p>
+                <span className="flex mt-2 flex-col md:flex-row">
+                  <Link href={"/blogs"}>
+                    <button className="md:w-1/4 flex mx-auto md:mx-0 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg ">
+                      <span className="mx-auto flex">
+                        Explore <span>&nbsp;</span>
+                        <BsArrowRight className="mt-[0.18rem] text-2xl" />{" "}
+                      </span>
+                    </button>
+                  </Link>
+                  <Link href={"/blogs"}>
+                    <button className="md:w-1/4 mt-3 md:mt-0 flex mx-auto md:mx-0 md:ml-5 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ">
+                      <span className="mx-auto flex">
+                        About Me
+                      </span>
+                    </button>
+                  </Link>
+                </span>
               </div>
               <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
                 <span className="font-bold">Happy Reading !</span>
@@ -97,7 +97,12 @@ export default function Home({ blogs }) {
                   className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl"
                 >
                   <span className="inline-block rounded-full">
-                    <Image src="/logo.png" alt="mom's corner" width={150} height={100} />
+                    <Image
+                      src="/logo.png"
+                      alt="mom's corner"
+                      width={150}
+                      height={100}
+                    />
                   </span>
 
                   <h1 className="text-2xl font-semibold text-gray-700 capitalize">
@@ -109,11 +114,11 @@ export default function Home({ blogs }) {
                       content={item.content}
                       projectId="r6hwcp84"
                       dataset="production"
-                      className=""
+                      className="h-[9rem] truncate max-w-sm whitespace-normal"
                       serializers={{
                         h1: (props) => <h1 style={{ color: "" }} {...props} />,
                         li: ({ children }) => (
-                          <li className="special-list-item">{children}...</li>
+                          <li className="special-list-item">{children}</li>
                         ),
                       }}
                     />

@@ -2,6 +2,7 @@ import React from "react";
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
 const Blogs = ({ blogs }) => {
@@ -12,15 +13,76 @@ const Blogs = ({ blogs }) => {
   });
   const builder = imageUrlBuilder(client);
 
+  const handleSearch = () => {
+    // console.log("Clicked")
+    let searchInput = document
+      .getElementById("search-input")
+      .value.toLowerCase();
+    let elements = document.querySelectorAll(".blog-title");
+    let blog = document.querySelectorAll(".blog-div");
+    let searchNotFound = document.getElementById("searchNotFound");
+
+    for (let i = 0; i < elements.length; i++) {
+      let match = blog[i].querySelectorAll(".blog-title")[0];
+
+      if (match) {
+        let textvalue = match.innerText || match.textContent;
+        if (textvalue.toLowerCase().indexOf(searchInput) > -1) {
+          blog[i].style.display = "";
+          searchNotFound.style.display = "none";
+        } else {
+          blog[i].style.display = "none";
+          searchNotFound.style.display = "flex";
+        }
+      }
+    }
+  };
+
   return (
     <>
-      <section className="bg-white lg:px-28">
-        <div className="container px-6 py-10 mx-auto">
+      <section className="bg-white lg:px-28 ">
+        <div className="container px-6 py-10 ">
+          <div className="md:flex w-full md:justify-start justify-center items-end">
+            <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
+              <label
+                htmlFor="hero-field"
+                className="leading-7 text-sm md:text-lg text-indigo-600"
+              >
+                Search anything here :)
+              </label>
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search Anything You Want !"
+                className="w-full mt-2 bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+
+            <button
+              onClick={handleSearch}
+              className="flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg"
+            >
+              <BsArrowRight className="mt-1" /> <span>&nbsp;</span> Search
+            </button>
+          </div>
+
           <div className="lg:flex lg:-mx-6 ">
             <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
+              <div
+                className="mt-5 hidden text-center align-middle text-red-400 font-bold"
+                id="searchNotFound"
+              >
+                Search not found ! Try searching{" "}&nbsp;
+                "<Link href="/blog/pregnancy">
+                  <a className="text-indigo-500 hover:underline">
+                    {" "}
+                  Pregnancy{" "}
+                  </a>
+                </Link>"
+              </div>
               {blogs.map((item) => {
                 return (
-                  <div key={item.slug.title} className="mb-16">
+                  <div key={item.slug.title} className="mb-16 mt-10 blog-div">
                     <div
                       className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
                       style={{
@@ -36,9 +98,10 @@ const Blogs = ({ blogs }) => {
                         Created By Sarrah Bharmal on {item.CreatedAt}
                       </p>
 
-                      <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
+                      <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800 blog-title">
                         {item.title}
                       </h1>
+
                       <PortableText
                         content={item.content}
                         projectId="r6hwcp84"
