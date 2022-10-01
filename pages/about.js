@@ -49,7 +49,7 @@ const About = ({ about }) => {
                     <input
                       type="hidden"
                       name="_next"
-                      value="https://momscorner.netlify.app//success"
+                      value="https://mommscorner.com/success"
                     />
                   </form>
                 </div>

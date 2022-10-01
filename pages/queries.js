@@ -34,6 +34,7 @@ const Queries = ({ faqs }) => {
                 className="mt-12"
               >
                 <input type="hidden" name="_captcha" value="false"></input>
+                <input type="hidden" name="_template" value="table" />
                 <div className="-mx-2 md:items-center md:flex">
                   <div className="flex-1 px-2">
                     <label className="block mb-2 text-sm text-gray-600 ">
@@ -76,7 +77,7 @@ const Queries = ({ faqs }) => {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://momscorner.netlify.app//success"
+                  value="https://mommscorner.com/success"
                 ></input>
                 <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
                   get in touch

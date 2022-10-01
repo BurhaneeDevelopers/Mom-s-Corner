@@ -271,6 +271,7 @@ export default function Home({ blogs }) {
                   className="mt-6"
                 >
                   <input type="hidden" name="_captcha" value="false"></input>
+                  <input type="hidden" name="_template" value="table" />
                   <div className="flex-1">
                     <label className="block mb-2 text-sm text-gray-600">
                       Full Name
@@ -310,7 +311,7 @@ export default function Home({ blogs }) {
                   <input
                     type="hidden"
                     name="_next"
-                    value="https://momscorner.netlify.app//success"
+                    value="https://mommscorner.com/success"
                   ></input>
                   <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-opacity-50">
                     get in touch
