@@ -23,7 +23,7 @@ export default function Home({ blogs }) {
   return (
     <div className="">
       <div className="main bg-gradient-to-r from-pink-300 to-pink-200">
-        <section className="text-gray-600 body-font px-5">
+        <section className="text-gray-600 body-font px-5 mx-10">
           <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-4xl text-[2rem] md:text-[3.3em] mb-4 font-medium text-9xll text-indigo-700">
@@ -109,10 +109,11 @@ export default function Home({ blogs }) {
                       content={item.content}
                       projectId="r6hwcp84"
                       dataset="production"
+                      className=""
                       serializers={{
                         h1: (props) => <h1 style={{ color: "" }} {...props} />,
                         li: ({ children }) => (
-                          <li className="special-list-item">{children}</li>
+                          <li className="special-list-item">{children}...</li>
                         ),
                       }}
                     />
@@ -125,7 +126,7 @@ export default function Home({ blogs }) {
                     <div className="">
                       <Link href={"/blog/" + item.slug.current}>
                         <div className="">
-                          <span className="mx-1">read more</span>{" "}
+                          <span className="mx-1">Read more</span>{" "}
                         </div>
                       </Link>
                     </div>
