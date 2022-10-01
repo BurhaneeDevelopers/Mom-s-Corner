@@ -90,7 +90,7 @@ const Queries = ({ faqs }) => {
                 height={400}
                 className="hidden object-cover object-top mx-auto rounded-full lg:block shrink-0 w-96 h-96"
                 src="/whatsapp-img.jpg"
-                alt=""
+                alt="Whatsapp"
               />
               <div className="mt-6 space-y-8 md:mt-8">
                 <p className="flex items-start -mx-2">
