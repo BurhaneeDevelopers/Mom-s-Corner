@@ -72,12 +72,12 @@ const Blogs = ({ blogs }) => {
                 id="searchNotFound"
               >
                 Search not found ! Try searching{" "}&nbsp;
-                "<Link href="/blog/pregnancy">
+                &quot;<Link href="/blog/pregnancy">
                   <a className="text-indigo-500 hover:underline">
                     {" "}
                   Pregnancy{" "}
                   </a>
-                </Link>"
+                </Link>&quot;
               </div>
               {blogs.map((item) => {
                 return (

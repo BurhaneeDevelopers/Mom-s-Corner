@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-import Script from "next/script";
+// import Script from "next/script";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Footer from "../components/footer";
@@ -34,15 +34,15 @@ function MyApp({ Component, pageProps }) {
           name="google-site-verification"
           content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
         />
-        <link rel="icon" href="/favicon.jpg" />
-      </Head>
-      <Script>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
           crossorigin="anonymous"
         ></script>
-      </Script>
+        <link rel="icon" href="/favicon.jpg" />
+      </Head>
+      {/* <Script>
+      </Script> */}
       <LoadingBar
         color="#ce1f7e"
         progress={progress}
