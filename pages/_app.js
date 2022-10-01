@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <title>Mom&apos;s Corner - The best guide for moms</title>
         <meta
           name="description"
-          content="We will guide you on how to take care of your baby. We offer information about the need for a new mother to take care of her baby and tips on what to do in each stage of your child's life."
+          content="Mommscorner.com is a website dedicated to moms, moms-to-be, and families. With articles on parenting, family life, and health, Mommscorner.com is the best guide for moms."
         />
         <meta
           name="keywords"
