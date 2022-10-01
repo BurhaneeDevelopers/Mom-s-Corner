@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-// import Script from "next/script";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Footer from "../components/footer";
@@ -26,6 +25,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Mommscorner.com is a website dedicated to moms, moms-to-be, and families. With articles on parenting, family life, and health, Mommscorner.com is the best guide for moms."
         />
+        <meta rel="conanical" content="https://mommscorner.com/blogs"/>
         <meta
           name="keywords"
           content="baby, parenting tips, baby blog, blog,  baby health blogs, baby health articles, baby health website, best baby health blogs, best baby health websites, baby health sites"
@@ -41,8 +41,6 @@ function MyApp({ Component, pageProps }) {
         ></script>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
-      {/* <Script>
-      </Script> */}
       <LoadingBar
         color="#ce1f7e"
         progress={progress}
