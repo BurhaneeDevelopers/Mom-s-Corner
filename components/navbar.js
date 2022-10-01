@@ -41,7 +41,7 @@ export default function Example() {
       >
         <Link href={"/about"}>
           <a className="md:mr-5 mr-2 md:text-xl text-indigo-700 font-medium hover:text-indigo-900">
-            About Us
+            About Me
           </a>
         </Link>
       </Typography>
