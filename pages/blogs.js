@@ -2,7 +2,7 @@ import React from "react";
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { BsArrowRight } from "react-icons/bs";
+import { AiOutlineSearch } from "react-icons/ai";
 import Link from "next/link";
 
 const Blogs = ({ blogs }) => {
@@ -14,7 +14,6 @@ const Blogs = ({ blogs }) => {
   const builder = imageUrlBuilder(client);
 
   const handleSearch = () => {
-    // console.log("Clicked")
     let searchInput = document
       .getElementById("search-input")
       .value.toLowerCase();
@@ -62,7 +61,7 @@ const Blogs = ({ blogs }) => {
               onClick={handleSearch}
               className="flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg"
             >
-              <BsArrowRight className="mt-1" /> <span>&nbsp;</span> Search
+              <AiOutlineSearch className="mt-1" /> <span>&nbsp;</span> Search
             </button>
           </div>
 
