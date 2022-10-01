@@ -1,5 +1,6 @@
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
+import { FaTelegramPlane } from "react-icons/fa";
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import Link from "next/link";
@@ -73,7 +74,7 @@ const Slug = ({ blog, blogs }) => {
                   </div>
                 </div>
 
-                <div className="comment mt-16">
+                <div className="comment mt-16 px-2">
                   <h1 className="text-indigo-500 text-xl">
                     Comment your feedback or ask any doubts related to this blog
                   </h1>
@@ -123,8 +124,10 @@ const Slug = ({ blog, blogs }) => {
                       name="_next"
                       value="https://mommscorner.com/success"
                     ></input>
-                    <button className="w-1/2 px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-500 rounded-md hover:bg-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
-                      Submit Your Message
+                    <button className="w-full md:w-1/2 flex items-center px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                      <span className="mx-auto flex">
+                        <FaTelegramPlane className="text-xl"/> <span>&nbsp;</span> Submit Your Message
+                      </span>
                     </button>
                   </form>
                 </div>
