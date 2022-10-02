@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { createClient } from "next-sanity";
+import PortableText from "react-portable-text";
 import imageUrlBuilder from "@sanity/image-url";
 
 const About = ({ about }) => {
@@ -74,7 +75,7 @@ const About = ({ about }) => {
           {about.map((item) => {
             return (
               <div key={item.slug.current} className="lg:w-4/6 mx-auto">
-                <div className="rounded-lg h-96 overflow-hidden">
+                <div className="rounded-lg lg:h-96 overflow-hidden">
                   <Image
                     width={1000}
                     height={600}
@@ -103,15 +104,32 @@ const About = ({ about }) => {
                       <p className="text-base">{item.title}</p>
                     </div>
                   </div>
-                  <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                  <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left align-middle lg:my-auto w-full">
                     <p className="leading-relaxed text-lg mb-4">
                       {item.metadesc}
                     </p>
+
+                    <span className="text-gray-500">
+                      <PortableText
+                        content={item.content}
+                        projectId="r6hwcp84"
+                        dataset="production"
+                        serializers={{
+                          h1: (props) => (
+                            <h1 style={{ color: "" }} {...props} />
+                          ),
+                          li: ({ children }) => (
+                            <li className="special-list-item">{children}</li>
+                          ),
+                        }}
+                      />
+                    </span>
+
                     <Link
                       href={"/blogs"}
                       className="text-indigo-500 inline-flex items-center"
                     >
-                      <div className="text-indigo-500 inline-flex items-center cursor-pointer">
+                      <div className="text-indigo-500 inline-flex items-center cursor-pointer mt-5">
                         Read my blogs
                         <svg
                           fill="none"

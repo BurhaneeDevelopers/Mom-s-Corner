@@ -125,9 +125,10 @@ const Slug = ({ blog, blogs }) => {
                       value="https://mommscorner.com/success"
                     ></input>
                     <button className="w-full md:w-1/2 flex items-center px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
-                      <span className="mx-auto flex">
-                        <FaTelegramPlane className="text-xl"/> <span>&nbsp;</span> Submit Your Message
-                      </span>
+                        <span className="mx-auto flex">
+                          <FaTelegramPlane className="text-xl" />{" "}
+                          <span>&nbsp;</span> Submit Your Message
+                        </span>
                     </button>
                   </form>
                 </div>

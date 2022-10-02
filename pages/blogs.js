@@ -28,10 +28,11 @@ const Blogs = ({ blogs }) => {
         let textvalue = match.innerText || match.textContent;
         if (textvalue.toLowerCase().indexOf(searchInput) > -1) {
           blog[i].style.display = "";
-          searchNotFound.style.display = "none";
+          searchNotFound.style.display = "none"
+          break;
         } else {
           blog[i].style.display = "none";
-          searchNotFound.style.display = "flex";
+          searchNotFound.style.display = "flex"
         }
       }
     }

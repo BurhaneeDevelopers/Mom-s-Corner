@@ -40,7 +40,7 @@ export default function Home({ blogs }) {
                   Explore Everything You Want :)
                 </p>
                 <span className="flex mt-2 flex-col md:flex-row">
-                  <Link href={"/blogs"}>
+                  <Link href={"#intro-blog"}>
                     <button className="md:w-1/4 flex mx-auto md:mx-0 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg ">
                       <span className="mx-auto flex">
                         Explore <span>&nbsp;</span>
@@ -48,7 +48,7 @@ export default function Home({ blogs }) {
                       </span>
                     </button>
                   </Link>
-                  <Link href={"/blogs"}>
+                  <Link href={"/about"}>
                     <button className="md:w-1/4 mt-3 md:mt-0 flex mx-auto md:mx-0 md:ml-5 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ">
                       <span className="mx-auto flex">
                         About Me
@@ -76,7 +76,7 @@ export default function Home({ blogs }) {
 
       <section className="bg-white">
         <div className="container px-6 py-10 mx-auto">
-          <div className="text-center">
+          <div className="text-center" id="intro-blog">
             <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl">
               Explore our <br /> Awesome{" "}
               <span className="text-indigo-500">Blogs</span>
