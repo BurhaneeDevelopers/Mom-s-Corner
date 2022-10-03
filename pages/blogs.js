@@ -26,13 +26,20 @@ const Blogs = ({ blogs }) => {
 
       if (match) {
         let textvalue = match.innerText || match.textContent;
-        if (textvalue.toLowerCase().indexOf(searchInput) > -1) {
+        if (textvalue.toLowerCase() === searchInput) {
+          searchNotFound.style.display = "none";
           blog[i].style.display = "";
-          searchNotFound.style.display = "none"
-          break;
+          console.log("search found");
         } else {
           blog[i].style.display = "none";
-          searchNotFound.style.display = "flex"
+          searchNotFound.style.display = "flex";
+          console.log("search not found");
+        }
+        if (textvalue.toLowerCase() === searchInput) {
+          searchNotFound.style.opacity = 0
+        }
+        if (searchInput == "") {
+          searchNotFound.innerText = "Field Cannot Be Blank !"
         }
       }
     }
