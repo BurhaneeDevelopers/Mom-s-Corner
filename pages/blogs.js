@@ -79,7 +79,7 @@ const Blogs = ({ blogs }) => {
                 className="mt-5 hidden text-center align-middle text-red-400 font-bold"
                 id="searchNotFound"
               >
-                Search not found ! Try searching &nbsp; &quot;
+                Search not found ! Try searching from related topics Example: &nbsp; &quot;
                 <Link href="/blog/pregnancy">
                   <a className="text-indigo-500 hover:underline"> Pregnancy </a>
                 </Link>
