@@ -29,11 +29,9 @@ const Blogs = ({ blogs }) => {
         if (textvalue.toLowerCase() === searchInput) {
           searchNotFound.style.display = "none";
           blog[i].style.display = "";
-          console.log("search found");
         } else {
           blog[i].style.display = "none";
           searchNotFound.style.display = "flex";
-          console.log("search not found");
         }
         if (textvalue.toLowerCase() === searchInput) {
           searchNotFound.style.opacity = 0
