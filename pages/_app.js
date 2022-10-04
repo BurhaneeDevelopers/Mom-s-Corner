@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-import Script from "next/script";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Footer from "../components/footer";
@@ -41,8 +40,6 @@ function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script>
-      </Script>
       <LoadingBar
         color="#ce1f7e"
         progress={progress}
