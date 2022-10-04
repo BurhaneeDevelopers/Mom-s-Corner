@@ -3,6 +3,7 @@ import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { AiOutlineSearch } from "react-icons/ai";
+import Head from "next/head";
 import Link from "next/link";
 
 const Blogs = ({ blogs }) => {
@@ -34,10 +35,10 @@ const Blogs = ({ blogs }) => {
           searchNotFound.style.display = "flex";
         }
         if (textvalue.toLowerCase() === searchInput) {
-          searchNotFound.style.opacity = 0
+          searchNotFound.style.opacity = 0;
         }
         if (searchInput == "") {
-          searchNotFound.innerText = "Field Cannot Be Blank !"
+          searchNotFound.innerText = "Field Cannot Be Blank !";
         }
       }
     }
@@ -45,6 +46,13 @@ const Blogs = ({ blogs }) => {
 
   return (
     <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <section className="bg-white lg:px-28 ">
         <div className="container px-6 py-10 ">
           <div className="md:flex w-full md:justify-start justify-center items-end">
@@ -77,7 +85,8 @@ const Blogs = ({ blogs }) => {
                 className="mt-5 hidden text-center align-middle text-red-400 font-bold"
                 id="searchNotFound"
               >
-                Search not found ! Try searching from related topics Example: &nbsp; &quot;
+                Search not found ! Try searching from related topics Example:
+                &nbsp; &quot;
                 <Link href="/blog/pregnancy">
                   <a className="text-indigo-500 hover:underline"> Pregnancy </a>
                 </Link>

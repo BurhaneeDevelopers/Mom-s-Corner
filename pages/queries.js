@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
 import { BsWhatsapp } from "react-icons/bs";
@@ -16,6 +17,13 @@ const Queries = ({ faqs }) => {
   const builder = imageUrlBuilder(client);
   return (
     <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <section className="min-h-screen bg-white">
         <div className="container px-6 lg:px-28 py-10 mx-auto">
           <div className="lg:flex lg:items-center lg:-mx-10">
