@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         <meta rel="conanical" content="https://mommscorner.com/blogs" />
         <meta
           name="keywords"
-          content="baby, parenting tips, baby blog, blog,  baby health blogs, baby health articles, baby health website, best baby health blogs, best baby health websites, baby health sites"
+          content="baby, mom, baby health, children health, mother health, pregnancy health, maternal health, mom blog, baby blog"
         />
         <meta
           name="google-site-verification"
