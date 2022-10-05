@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="baby, mom, baby health, children health, mother health, pregnancy health, maternal health, mom blog, baby blog"
         />
+        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
         <meta
           name="google-site-verification"
           content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
