@@ -3,13 +3,14 @@ import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { AiOutlineSearch } from "react-icons/ai";
-import Head from "next/head";
+import Script from "next/script";
 import Link from "next/link";
 
 const Blogs = ({ blogs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
+    apiVersion: "2021-10-21",
     useCdn: false,
   });
   const builder = imageUrlBuilder(client);
@@ -46,13 +47,11 @@ const Blogs = ({ blogs }) => {
 
   return (
     <>
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+        crossorigin="anonymous"
+      ></Script>
       <section className="bg-white lg:px-28 ">
         <div className="container px-6 py-10 ">
           <div className="md:flex w-full md:justify-start justify-center items-end">

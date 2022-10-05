@@ -2,26 +2,25 @@ import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import { FaTelegramPlane } from "react-icons/fa";
 import imageUrlBuilder from "@sanity/image-url";
-import Head from "next/head";
+import Script from "next/script";
 import Link from "next/link";
 
 const Slug = ({ blog, blogs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
+    apiVersion: "2021-10-21",
     useCdn: false,
   });
   const builder = imageUrlBuilder(client);
 
   return (
     <>
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+        crossorigin="anonymous"
+      ></Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
@@ -125,10 +124,10 @@ const Slug = ({ blog, blogs }) => {
                       value="https://mommscorner.com/success"
                     ></input>
                     <button className="w-full md:w-1/2 flex items-center px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
-                        <span className="mx-auto flex">
-                          <FaTelegramPlane className="text-xl" />{" "}
-                          <span>&nbsp;</span> Submit Your Message
-                        </span>
+                      <span className="mx-auto flex">
+                        <FaTelegramPlane className="text-xl" />{" "}
+                        <span>&nbsp;</span> Submit Your Message
+                      </span>
                     </button>
                   </form>
                 </div>

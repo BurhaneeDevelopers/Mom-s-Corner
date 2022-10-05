@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
+import Script from "next/script";
 import {
   AiOutlineMail,
   AiOutlineInstagram,
@@ -16,19 +16,18 @@ export default function Home({ blogs }) {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
+    apiVersion: "2021-10-21",
     useCdn: false,
   });
 
   const builder = imageUrlBuilder(client);
   return (
     <>
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+        crossorigin="anonymous"
+      ></Script>
       <div className="main bg-gradient-to-r from-pink-300 to-pink-200">
         <section className="text-gray-600 body-font px-5 mx-10">
           <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
@@ -49,7 +48,7 @@ export default function Home({ blogs }) {
                 </p>
                 <span className="flex mt-2 flex-col md:flex-row">
                   <Link href={"#intro-blog"}>
-                    <button className="md:w-1/4 flex mx-auto md:mx-0 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg ">
+                    <button className="xl:w-1/4 flex mx-auto md:mx-0 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg ">
                       <span className="mx-auto flex">
                         Explore <span>&nbsp;</span>
                         <BsArrowRight className="mt-[0.18rem] text-2xl" />{" "}
@@ -57,7 +56,7 @@ export default function Home({ blogs }) {
                     </button>
                   </Link>
                   <Link href={"/about"}>
-                    <button className="md:w-1/4 mt-3 md:mt-0 flex mx-auto md:mx-0 md:ml-5 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ">
+                    <button className="xl:w-1/4 mt-3 md:mt-0 flex mx-auto md:mx-0 md:ml-5 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ">
                       <span className="mx-auto flex">About Me</span>
                     </button>
                   </Link>

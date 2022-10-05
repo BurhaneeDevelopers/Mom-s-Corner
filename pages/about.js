@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
+import Script from "next/script";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import imageUrlBuilder from "@sanity/image-url";
@@ -10,6 +10,7 @@ const About = ({ about }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
+    apiVersion: "2021-10-21",
     useCdn: false,
   });
 
@@ -17,13 +18,11 @@ const About = ({ about }) => {
 
   return (
     <>
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+        crossorigin="anonymous"
+      ></Script>
       <header className="bg-gradient-to-r from-pink-300 to-pink-200">
         <div className="container px-6 lg:px-12 py-16 mx-auto">
           <div className="items-center lg:flex lg:ml-28">

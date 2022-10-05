@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Footer from "../components/footer";
 import LoadingBar from "react-top-loading-bar";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 function MyApp({ Component, pageProps }) {
   const [progress, setProgress] = useState(0);
@@ -35,22 +36,12 @@ function MyApp({ Component, pageProps }) {
           name="google-site-verification"
           content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
         />
-        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossorigin="anonymous"
-        ></script>
       </Head>
-      {/* <Script
+      <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6ECHNL4VF3"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+        crossorigin="anonymous"
       ></Script>
-      <Script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-6ECHNL4VF3');
-      </Script> */}
       <LoadingBar
         color="#ce1f7e"
         progress={progress}
@@ -60,6 +51,7 @@ function MyApp({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <Navbar />
+      <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3"/>
       <Component {...pageProps} />
       <Footer />
     </>
