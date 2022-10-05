@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <title>Mom&apos;s Corner - The best guide for moms</title>
         <meta
           name="description"
-          content="Mommscorner.com is a website dedicated to moms, moms-to-be, and families. With articles on parenting, family life, and health, Mommscorner.com is the best guide for moms."
+          content="Mommscorner.com is a website dedicated to moms, moms-to-be, and families. With articles on parenting, family life, and health."
         />
         <meta rel="conanical" content="https://mommscorner.com/blogs" />
         <meta
