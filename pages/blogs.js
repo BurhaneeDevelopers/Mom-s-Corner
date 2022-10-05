@@ -53,31 +53,30 @@ const Blogs = ({ blogs }) => {
         crossorigin="anonymous"
       ></Script>
       <section className="bg-white lg:px-28 ">
-        <div className="container px-6 py-10 ">
-          <div className="md:flex w-full md:justify-start justify-center items-end">
-            <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
-              <label
-                htmlFor="hero-field"
-                className="leading-7 text-sm md:text-lg text-indigo-600"
-              >
-                Search anything here :)
-              </label>
-              <input
-                type="search"
-                id="search-input"
-                placeholder="Search Anything You Want !"
-                className="w-full mt-2 bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-
-            <button
-              onClick={handleSearch}
-              className="flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg"
+        <div className="md:flex w-full md:justify-start justify-center items-end mt-7 mx-5">
+          <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
+            <label
+              htmlFor="hero-field"
+              className="leading-7 text-sm md:text-lg text-indigo-600"
             >
-              <AiOutlineSearch className="mt-1" /> <span>&nbsp;</span> Search
-            </button>
+              Search anything here :)
+            </label>
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search Anything You Want !"
+              className="w-full mt-2 bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
           </div>
 
+          <button
+            onClick={handleSearch}
+            className="flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded text-lg"
+          >
+            <AiOutlineSearch className="mt-1" /> <span>&nbsp;</span> Search
+          </button>
+        </div>
+        <div className="container px-6 py-10 ">
           <div className="lg:flex lg:-mx-6 ">
             <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
               <div
