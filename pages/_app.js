@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         <meta rel="conanical" content="https://mommscorner.com/blogs" />
         <meta
           name="keywords"
-          content="baby, mom, baby health, children health, mother health, pregnancy health, maternal health, mom blog, baby blog"
+          content="parenting, mom, baby health, children health, mother health, pregnancy health, maternal health, mom blog, baby, postpartum"
         />
         <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
         <meta
