@@ -126,7 +126,7 @@ const Blogs = ({ blogs }) => {
                         }}
                       />
                       <div className="flex items-center mt-6">
-                        <div
+                        {/* <div
                           className="bg-cover w-12 h-12 rounded-full"
                           style={{
                             backgroundImage: `url(${builder
@@ -134,7 +134,7 @@ const Blogs = ({ blogs }) => {
                               .width(200)
                               .url()})`,
                           }}
-                        ></div>
+                        ></div> */}
 
                         <div className="mx-4">
                           <h1 className="text-sm text-gray-700">
