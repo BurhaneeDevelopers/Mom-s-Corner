@@ -96,14 +96,15 @@ const Queries = ({ faqs }) => {
               {faqs.map((item) => {
                 return (
                   <div
-                      className=" hidden bg-cover object-top mx-auto rounded-full lg:block shrink-0 w-96 h-96 bg-no-repeat"
-                      style={{
-                        backgroundImage: `url(${builder
-                          .image(item.faqimage)
-                          .width(200)
-                          .url()})`,
-                      }}
-                    ></div>
+                    key={item.slug.title}
+                    className=" hidden bg-cover object-top mx-auto rounded-full lg:block shrink-0 w-96 h-96 bg-no-repeat"
+                    style={{
+                      backgroundImage: `url(${builder
+                        .image(item.faqimage)
+                        .width(200)
+                        .url()})`,
+                    }}
+                  ></div>
                 );
               })}
               <div className="mt-6 space-y-8 md:mt-8">
