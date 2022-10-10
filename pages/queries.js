@@ -211,11 +211,11 @@ const Queries = ({ faqs }) => {
                   </div>
 
                   <div>
-                    <h1 className="text-xl font-semibold text-center text-indigo-600">
+                    <h1 className="text-xl font-semibold text-center text-indigo-600 mb-5">
                       {item.title}
                     </h1>
 
-                    <span className="mt-2 text-sm text-gray-500 text-center">
+                    <span className="text-sm text-gray-500 text-center">
                       <PortableText
                         // Pass in block content straight from Sanity.io
                         content={item.content}
