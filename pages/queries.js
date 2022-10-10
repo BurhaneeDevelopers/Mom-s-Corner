@@ -200,14 +200,8 @@ const Queries = ({ faqs }) => {
             {faqs.map((item) => {
               return (
                 <div key={item.slug.current}>
-                  <div className="grid p-3 rounded-lg">
-                    <Image
-                      className="object-contain"
-                      src="/logo.png"
-                      width={200}
-                      height={120}
-                      alt="logo"
-                    />
+                  <div className="grid p-3 rounded-lg object-contain">
+                    {item.faqimage}
                   </div>
 
                   <div>
