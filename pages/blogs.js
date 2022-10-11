@@ -92,7 +92,7 @@ const Blogs = ({ blogs }) => {
               </div>
               {blogs.map((item) => {
                 return (
-                  <div key={item.slug.title} className="mb-16 mt-10 blog-div">
+                  <div key={item.slug.current} className="mb-16 mt-10 blog-div">
                     <div
                       className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
                       style={{
