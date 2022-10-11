@@ -78,7 +78,7 @@ const Blogs = ({ blogs }) => {
         </div>
         <div className="container px-6 py-10 ">
           <div className="lg:flex lg:-mx-6 ">
-            <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
+            <div className="lg:w-3/4 max-h-[100vh] overflow-y-auto p-5 md:p-0 lg:px-6">
               <div
                 className="mt-5 hidden text-center align-middle text-red-400 font-bold"
                 id="searchNotFound"
@@ -108,21 +108,77 @@ const Blogs = ({ blogs }) => {
                         Created By Sarrah Bharmal on {item.CreatedAt}
                       </p>
 
-                      <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800 blog-title">
+                      <h1 className="mt-4 text-5xl leading-tight text-gray-800 blog-title">
                         {item.title}
                       </h1>
 
                       <PortableText
+                        className="portabletext text-justify"
                         content={item.content}
                         projectId="r6hwcp84"
                         dataset="production"
                         serializers={{
                           h1: (props) => (
-                            <h1 style={{ color: "" }} {...props} />
+                            <h1
+                              style={{
+                                marginTop: "1rem ",
+                                marginBottom: "0.1rem",
+                                fontSize: "2.1rem",
+                              }}
+                              {...props}
+                            />
                           ),
-                          li: ({ children }) => (
-                            <li className="special-list-item">{children}</li>
+                          h2: (props) => (
+                            <h2
+                              style={{
+                                marginTop: "1rem ",
+                                marginBottom: "0.1rem",
+                                fontSize: "1.7rem",
+                              }}
+                              {...props}
+                            />
                           ),
+                          h3: (props) => (
+                            <h3
+                              style={{
+                                marginTop: "1rem",
+                                marginBottom: "0.1rem",
+                                fontSize: "1.4rem",
+                              }}
+                              {...props}
+                            />
+                          ),
+                          h4: (props) => (
+                            <h4
+                              style={{
+                                marginTop: "1rem ",
+                                marginBottom: "0.1rem",
+                                fontSize: "1.2rem",
+                              }}
+                              {...props}
+                            />
+                          ),
+                          h5: (props) => (
+                            <h5
+                              style={{
+                                marginTop: "1rem ",
+                                marginBottom: "0.1rem",
+                                fontSize: "1rem",
+                              }}
+                              {...props}
+                            />
+                          ),
+                          h6: (props) => (
+                            <h6
+                              style={{
+                                marginTop: "1rem ",
+                                marginBottom: "0.1rem",
+                                fontSize: "0.8rem",
+                              }}
+                              {...props}
+                            />
+                          ),
+                          li: ({ children }) => <li className="special-list-item">{children}</li>,
                         }}
                       />
                       <div className="flex items-center mt-6">

@@ -39,3 +39,10 @@ html{
         display: none;
     }
 }
+
+.portabletext img{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+    height: 25rem;
+}

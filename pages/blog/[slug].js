@@ -45,11 +45,71 @@ const Slug = ({ blog, blogs }) => {
                     {blog.title}
                   </h1>
                   <PortableText
-                    content={blog.content}
+                    className="portabletext text-justify"
+                    content={item.content}
                     projectId="r6hwcp84"
                     dataset="production"
                     serializers={{
-                      h1: (props) => <h1 style={{ color: "" }} {...props} />,
+                      h1: (props) => (
+                        <h1
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "2.1rem",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h2: (props) => (
+                        <h2
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.7rem",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h3: (props) => (
+                        <h3
+                          style={{
+                            marginTop: "1rem",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.4rem",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h4: (props) => (
+                        <h4
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.2rem",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h5: (props) => (
+                        <h5
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1rem",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h6: (props) => (
+                        <h6
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "0.8rem",
+                          }}
+                          {...props}
+                        />
+                      ),
                       li: ({ children }) => (
                         <li className="special-list-item">{children}</li>
                       ),
