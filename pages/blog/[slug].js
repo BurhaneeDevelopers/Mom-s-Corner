@@ -46,7 +46,7 @@ const Slug = ({ blog, blogs }) => {
                   </h1>
                   <PortableText
                     className="portabletext text-justify"
-                    content={item.content}
+                    content={blog.content}
                     projectId="r6hwcp84"
                     dataset="production"
                     serializers={{
@@ -126,8 +126,13 @@ const Slug = ({ blog, blogs }) => {
                       }}
                     ></div>
 
-                    <div className="mx-4">
-                      <h1 className="text-sm text-gray-700">Sarrah Bharmal</h1>
+                    <div className="">
+                      <h1 className="text-sm text-start text-indigo-700">
+                        <a href="https://www.instagram.com/sarrah_aliasgar/">
+                          {" "}
+                          Created by Sarrah Bharmal{" "}
+                        </a>
+                      </h1> 
                       <p className="text-sm text-gray-500"> {blog.category}</p>
                     </div>
                   </div>
@@ -201,15 +206,6 @@ const Slug = ({ blog, blogs }) => {
               {blogs.map((item) => {
                 return (
                   <div key={item.slug.title} className="flex mb-5">
-                    <div
-                      className="bg-cover w-12 h-12 rounded-full m-2"
-                      style={{
-                        backgroundImage: `url(${builder
-                          .image(item.blogimage)
-                          .width(200)
-                          .url()})`,
-                      }}
-                    ></div>
                     <div>
                       <h3 className="text-indigo-500 capitalize">
                         {item.title}
