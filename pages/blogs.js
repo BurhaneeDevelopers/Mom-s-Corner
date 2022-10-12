@@ -102,7 +102,6 @@ const Blogs = ({ blogs }) => {
                           .url()})`,
                       }}
                     ></div>
-
                     <div>
                       <p className="mt-6 text-sm text-indigo-500 uppercase">
                         Created By Sarrah Bharmal on {item.CreatedAt}
@@ -178,7 +177,9 @@ const Blogs = ({ blogs }) => {
                               {...props}
                             />
                           ),
-                          li: ({ children }) => <li className="special-list-item">{children}</li>,
+                          li: ({ children }) => (
+                            <li className="special-list-item">{children}</li>
+                          ),
                         }}
                       />
                       <div className="items-start mt-6">
@@ -194,7 +195,10 @@ const Blogs = ({ blogs }) => {
 
                         <div className="">
                           <h1 className="text-sm text-indigo-700">
-                          <a href="https://www.instagram.com/sarrah_aliasgar/"> Created by Sarrah Bharmal </a>
+                            <a href="https://www.instagram.com/sarrah_aliasgar/">
+                              {" "}
+                              Created by Sarrah Bharmal{" "}
+                            </a>
                           </h1>
                           <p className="text-sm text-gray-500">
                             {" "}
