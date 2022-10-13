@@ -33,6 +33,12 @@ function MyApp({ Component, pageProps }) {
           content="mommscorner, moms corner, parenting, mom, baby health, children health, mother health, pregnancy health, maternal health, pregnancy symptoms, baby, postpartum, mom guide"
         />
         <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+          rel="stylesheet"
+        ></link>
         <meta
           name="google-site-verification"
           content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
@@ -52,7 +58,7 @@ function MyApp({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <Navbar />
-      <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3"/>
+      <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3" />
       <Component {...pageProps} />
       <Footer />
     </>

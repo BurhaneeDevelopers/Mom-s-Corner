@@ -5,7 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Script from "next/script";
 import Link from "next/link";
 
-const Slug = ({ blog, blogs }) => {
+const Slug = ({ blog, blogs, faqs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
@@ -132,7 +132,7 @@ const Slug = ({ blog, blogs }) => {
                           {" "}
                           Created by Sarrah Bharmal{" "}
                         </a>
-                      </h1> 
+                      </h1>
                       <p className="text-sm text-gray-500"> {blog.category}</p>
                     </div>
                   </div>
@@ -201,7 +201,7 @@ const Slug = ({ blog, blogs }) => {
 
             <hr className="flex bg-pink-500 mt-5" />
 
-            <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
+            <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-scroll ml-5">
               <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
               {blogs.map((item) => {
                 return (
@@ -222,6 +222,103 @@ const Slug = ({ blog, blogs }) => {
                   </div>
                 );
               })}
+
+              <div className="text-center">
+                <h1 className="text-lg text-center font-semibold text-indigo-700 lg:text-xl">
+                  Frequently asked questions.
+                </h1>
+                <hr className="bg-black h-[0.1rem] ml-1" />
+                <div className="text-md text-pink-600 mt-2 text-center flex space-x-2 justify-center">
+                  <PortableText
+                    className="portabletext text-justify text-md"
+                    content={blog.faq}
+                    projectId="r6hwcp84"
+                    dataset="production"
+                    serializers={{
+                      h1: (props) => (
+                        <h1
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "2.1rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h2: (props) => (
+                        <h2
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.7rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h3: (props) => (
+                        <h3
+                          style={{
+                            marginTop: "1rem",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h4: (props) => (
+                        <h4
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1.2rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h5: (props) => (
+                        <h5
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "1rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      h6: (props) => (
+                        <h6
+                          style={{
+                            marginTop: "1rem ",
+                            marginBottom: "0.1rem",
+                            fontSize: "0.8rem",
+                            fontWeight: "bold",
+                            color: "blueviolet",
+                          }}
+                          {...props}
+                        />
+                      ),
+                      li: ({ children }) => (
+                        <li className="special-list-item">{children}</li>
+                      ),
+                    }}
+                  />
+                </div>
+                <div className="text-sm text-indigo-600 mt-5">
+                  Your question not answered ? Try sending us your{" "}
+                  <Link href="/queries"><span className="text-pink-500 font-bold cursor-pointer">feedback/query</span></Link> we will
+                  try to answer it very soon
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -244,10 +341,13 @@ export const getServerSideProps = async (context) => {
   const blog = await client.fetch(query);
   const queries = `*[_type == "blog"]`;
   const blogs = await client.fetch(queries);
+  const queriess = `*[_type == "faq"]`;
+  const faqs = await client.fetch(queriess);
   return {
     props: {
       blog,
       blogs,
+      faqs,
     },
   };
 };
