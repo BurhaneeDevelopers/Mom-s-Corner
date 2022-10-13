@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
@@ -6,7 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import Script from "next/script";
 import Link from "next/link";
 
-const Blogs = ({ blogs }) => {
+const Blogs = ({ blogs, faqs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
@@ -182,6 +183,7 @@ const Blogs = ({ blogs }) => {
                           ),
                         }}
                       />
+
                       <div className="items-start mt-6">
                         {/* <div
                           className="bg-cover w-12 h-12 rounded-full"
@@ -239,6 +241,56 @@ const Blogs = ({ blogs }) => {
           </div>
         </div>
       </section>
+      <section className="bg-gradient-to-r from-pink-200 to-pink-100 mb-16">
+        <div className="container px-6 py-12 mx-auto">
+          <h1 className="text-2xl text-center font-semibold text-indigo-700 lg:text-4xl">
+            Frequently asked questions.
+          </h1>
+
+          <div className="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3">
+            {faqs.map((item) => {
+              return (
+                <div key={item.slug.current}>
+                  <div className="grid p-3 rounded-lg">
+                    <Image
+                      className="object-contain"
+                      src="/logo.png"
+                      width={200}
+                      height={120}
+                      alt="logo"
+                    />
+                  </div>
+
+                  <div>
+                    <h1 className="text-xl font-semibold text-center text-indigo-600 mb-5">
+                      {item.title}
+                    </h1>
+
+                    <span className="text-sm text-gray-500 text-center">
+                      <PortableText
+                        // Pass in block content straight from Sanity.io
+                        content={item.content}
+                        projectId="r6hwcp84"
+                        dataset="production"
+                        // Optionally override marks, decorators, blocks, etc. in a flat
+                        // structure without doing any gymnastics
+                        serializers={{
+                          h1: (props) => (
+                            <h1 style={{ color: "" }} {...props} />
+                          ),
+                          li: ({ children }) => (
+                            <li className="special-list-item">{children}</li>
+                          ),
+                        }}
+                      />
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
@@ -254,9 +306,12 @@ export async function getServerSideProps(context) {
   });
   const query = `*[_type == "blog"]`;
   const blogs = await client.fetch(query);
+  const queries = `*[_type == "faq"]`;
+  const faqs = await client.fetch(queries);
   return {
     props: {
       blogs,
+      faqs,
     },
   };
 }

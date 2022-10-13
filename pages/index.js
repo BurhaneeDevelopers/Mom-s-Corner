@@ -206,12 +206,6 @@ export default function Home({ blogs }) {
               </p>
 
               <div className="mt-6 space-y-8 md:mt-8">
-                <p className="flex items-start -mx-2">
-                  <BsFillTelephoneFill className="mt-1 text-indigo-600" />
-                  <span className="mx-2 text-white truncate w-72">
-                    +91 99406 11281
-                  </span>
-                </p>
 
                 <p className="flex items-start -mx-2">
                   <AiOutlineMail className="mt-1 text-indigo-600" />
@@ -256,7 +250,7 @@ export default function Home({ blogs }) {
                     target="_blank"
                     rel="noreferrer"
                     className="mx-1.5 text-white transition-colors duration-300 transform hover:text-indigo-500"
-                    href="https://wa.me/9940611281?text=Hi%20I%20found%20you%20on%20momcorners.com"
+                    href="https://wa.me/9940611281?text=Hi%20I%20found%20you%20on%20mommscorner.com"
                   >
                     <BsWhatsapp className="w-full h-full text-xl" />
                   </a>
