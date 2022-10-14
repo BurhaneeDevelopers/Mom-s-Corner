@@ -266,7 +266,7 @@ const Blogs = ({ blogs, faqs }) => {
                       {item.title}
                     </h1>
 
-                    <span className="text-sm text-gray-500 text-center">
+                    <span className="text-md text-gray-500 text-center">
                       <PortableText
                         // Pass in block content straight from Sanity.io
                         content={item.content}
