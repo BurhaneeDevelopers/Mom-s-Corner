@@ -77,9 +77,9 @@ export default function Example() {
   );
 
   return (
-    <div className="bg-gradient-to-r from-pink-300 to-pink-200">
-      <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 bg-transparent border-none p-0 pr-1 h-[7rem]">
-        <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <div className="bg-gradient-to-r from-pink-300 to-pink-200 ">
+      <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 bg-transparent border-none">
+        <div className="container mx-auto flex items-center justify-between text-blue-gray-900 h-12 pt-2 lg:h-20">
           <Typography
             as="a"
             href="#"
