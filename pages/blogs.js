@@ -29,14 +29,14 @@ const Blogs = ({ blogs, faqs }) => {
 
       if (match) {
         let textvalue = match.innerText || match.textContent;
-        if (textvalue.toLowerCase() === searchInput) {
+        if (textvalue.toLowerCase().indexOf(searchInput) > -1) {
           searchNotFound.style.display = "none";
           blog[i].style.display = "";
         } else {
           blog[i].style.display = "none";
           searchNotFound.style.display = "flex";
         }
-        if (textvalue.toLowerCase() === searchInput) {
+        if (textvalue.toLowerCase().indexOf(searchInput) > -1) {
           searchNotFound.style.opacity = 0;
         }
         if (searchInput == "") {
