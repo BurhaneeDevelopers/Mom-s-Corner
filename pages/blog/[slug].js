@@ -5,7 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Script from "next/script";
 import Link from "next/link";
 
-const Slug = ({ blog, blogs, faqs }) => {
+const Slug = ({ blog, blogs}) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
@@ -32,7 +32,7 @@ const Slug = ({ blog, blogs, faqs }) => {
                     backgroundImage: `url(${builder
                       .image(blog.blogimage)
                       .width(200)
-                      .url()})`,
+                      .url()})`
                   }}
                 ></div>
 
@@ -111,20 +111,12 @@ const Slug = ({ blog, blogs, faqs }) => {
                         />
                       ),
                       li: ({ children }) => (
-                        <li className="special-list-item">{children}</li>
+                        <li className="list-disc ml-7 mb-1">{children}</li>
                       ),
                     }}
                   />
                   <div className="flex items-center mt-6">
-                    <div
-                      className="bg-cover w-12 h-12 rounded-full"
-                      style={{
-                        backgroundImage: `url(${builder
-                          .image(blog.blogprofileimage)
-                          .width(200)
-                          .url()})`,
-                      }}
-                    ></div>
+                    {/* gi */}
 
                     <div className="">
                       <h1 className="text-sm text-start text-indigo-700">
@@ -308,7 +300,7 @@ const Slug = ({ blog, blogs, faqs }) => {
                         />
                       ),
                       li: ({ children }) => (
-                        <li className="special-list-item">{children}</li>
+                        <li className="list-disc ml-7 mb-1">{children}</li>
                       ),
                     }}
                   />
@@ -341,13 +333,10 @@ export const getServerSideProps = async (context) => {
   const blog = await client.fetch(query);
   const queries = `*[_type == "blog"]`;
   const blogs = await client.fetch(queries);
-  const queriess = `*[_type == "faq"]`;
-  const faqs = await client.fetch(queriess);
   return {
     props: {
       blog,
       blogs,
-      faqs,
     },
   };
 };

@@ -204,7 +204,7 @@ const Queries = ({ faqs }) => {
                             <h1 style={{ color: "" }} {...props} />
                           ),
                           li: ({ children }) => (
-                            <li className="special-list-item">{children}</li>
+                            <li className="list-disc ml-7 mb-1">{children}</li>
                           ),
                         }}
                       />

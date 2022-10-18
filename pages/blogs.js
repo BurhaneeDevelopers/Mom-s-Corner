@@ -179,7 +179,7 @@ const Blogs = ({ blogs, faqs }) => {
                             />
                           ),
                           li: ({ children }) => (
-                            <li className="special-list-item">{children}</li>
+                            <li className="list-disc ml-7 mb-1">{children}</li>
                           ),
                         }}
                       />
@@ -279,7 +279,7 @@ const Blogs = ({ blogs, faqs }) => {
                             <h1 style={{ color: "" }} {...props} />
                           ),
                           li: ({ children }) => (
-                            <li className="special-list-item">{children}</li>
+                            <li className="list-disc ml-7 mb-1">{children}</li>
                           ),
                         }}
                       />

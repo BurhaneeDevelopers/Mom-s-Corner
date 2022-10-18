@@ -7,7 +7,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
-import { BsFillTelephoneFill, BsWhatsapp, BsArrowRight } from "react-icons/bs";
+import { BsWhatsapp, BsArrowRight } from "react-icons/bs";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import imageUrlBuilder from "@sanity/image-url";
@@ -123,7 +123,7 @@ export default function Home({ blogs }) {
                       serializers={{
                         h1: (props) => <h1 style={{ color: "" }} {...props} />,
                         li: ({ children }) => (
-                          <li className="special-list-item">{children}</li>
+                          <li className="list-disc ml-7 mb-1">{children}</li>
                         ),
                       }}
                     />
