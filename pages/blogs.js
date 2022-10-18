@@ -77,9 +77,9 @@ const Blogs = ({ blogs, faqs }) => {
             <AiOutlineSearch className="mt-1" /> <span>&nbsp;</span> Search
           </button>
         </div>
-        <div className="container px-6 py-10 ">
+        <div className="py-10">
           <div className="lg:flex lg:-mx-6 ">
-            <div className="lg:w-3/4 max-h-[100vh] overflow-y-auto p-5 md:p-0 lg:px-6">
+            <div className="lg:w-3/4 max-h-[100vh] p-5 md:p-0 overflow-y-auto blog-scroll">
               <div
                 className="mt-5 hidden text-center align-middle text-red-400 font-bold"
                 id="searchNotFound"
@@ -93,7 +93,7 @@ const Blogs = ({ blogs, faqs }) => {
               </div>
               {blogs.map((item) => {
                 return (
-                  <div key={item.slug.current} className="mb-16 mt-10 blog-div">
+                  <div key={item.slug.current} className="mb-16 mt-10 blog-div ml-5 md:px-10">
                     <div
                       className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
                       style={{
@@ -216,7 +216,7 @@ const Blogs = ({ blogs, faqs }) => {
 
             <hr className="flex bg-pink-500 mt-5" />
 
-            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto">
+            <div className=" mt-8 lg:w-1/4 lg:mt-0 lg:px-6 max-h-[70vh] overflow-y-auto px-16 py-5">
               <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
               {blogs.map((item) => {
                 return (

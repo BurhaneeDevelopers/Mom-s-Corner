@@ -2,48 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
-*{
-    font-family: 'Josefin Sans', sans-serif;
+* {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-    width: 0.8em;
+  width: 20px;
+  height: 20px;
+  width: 0.8em;
 }
 
 ::-webkit-scrollbar-track {
-    margin-block: 1em;
-    border-radius: 100vh;
-    background: rgb(241, 230, 232);
+  margin-block: 1em;
+  border-radius: 100vh;
+  background: rgb(241, 230, 232);
 }
 
 ::-webkit-scrollbar-thumb {
-    background:rgb(157, 75, 235);
-    border-radius: 100vh;
+  background: rgb(157, 75, 235);
+  border-radius: 100vh;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background:blueviolet;
+  background: blueviolet;
+}
+html {
+  scroll-behavior: smooth;
+}
+.welcome-text {
+  line-height: 4rem;
+}
+@media screen and (max-width: 400px) {
+  nav {
+    display: none;
+  }
 }
 
-html{
-    scroll-behavior: smooth;
+.portabletext img {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 30rem;
+  height: 25rem;
 }
-.welcome-text{
-    line-height: 4rem;
-}
-@media screen and (max-width:400px) {
-    nav{
-        display: none;
-    }
-}
-
-.portabletext img{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    width: 30rem;
-    height: 25rem;
+@media screen and (max-width: 1024px) {
+  .blog-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .blog-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

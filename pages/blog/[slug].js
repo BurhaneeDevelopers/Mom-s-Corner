@@ -24,7 +24,7 @@ const Slug = ({ blog, blogs}) => {
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
-            <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto">
+            <div className="lg:w-3/4 lg:px-6 max-h-[100vh] overflow-y-auto blog-scroll">
               <div className="">
                 <div
                   className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
