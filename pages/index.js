@@ -121,7 +121,7 @@ export default function Home({ blogs }) {
                       dataset="production"
                       className="h-[9rem] truncate max-w-sm whitespace-normal"
                       serializers={{
-                        h1: (props) => <h1 style={{ color: "" }} {...props} />,
+                        h1: (props) => <h1 {...props} />,
                         li: ({ children }) => (
                           <li className="list-disc ml-7 mb-1">{children}</li>
                         ),
