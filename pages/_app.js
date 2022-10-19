@@ -43,12 +43,12 @@ function MyApp({ Component, pageProps }) {
           name="google-site-verification"
           content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossOrigin="anonymous"
-      ></Script>
       <LoadingBar
         color="#ce1f7e"
         progress={progress}
