@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
           rel="stylesheet"
@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></Script>
       <LoadingBar
         color="#ce1f7e"

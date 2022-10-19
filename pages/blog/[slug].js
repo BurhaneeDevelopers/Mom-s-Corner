@@ -5,7 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Script from "next/script";
 import Link from "next/link";
 
-const Slug = ({ blog, blogs}) => {
+const Slug = ({ blog, blogs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
     dataset: "production",
@@ -19,7 +19,7 @@ const Slug = ({ blog, blogs}) => {
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
@@ -32,7 +32,7 @@ const Slug = ({ blog, blogs}) => {
                     backgroundImage: `url(${builder
                       .image(blog.blogimage)
                       .width(200)
-                      .url()})`
+                      .url()})`,
                   }}
                 ></div>
 
@@ -55,7 +55,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "2.1rem",
+                            fontSize: "2.3rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -65,7 +66,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1.7rem",
+                            fontSize: "1.9rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -75,7 +77,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem",
                             marginBottom: "0.1rem",
-                            fontSize: "1.4rem",
+                            fontSize: "1.6rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -85,7 +88,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1.2rem",
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -95,7 +99,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1rem",
+                            fontSize: "1.2rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -105,7 +110,8 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "0.8rem",
+                            fontSize: "1rem",
+                            fontWeight: "bold",
                           }}
                           {...props}
                         />
@@ -122,7 +128,7 @@ const Slug = ({ blog, blogs}) => {
                       <h1 className="text-sm text-start text-indigo-700">
                         <a href="https://www.instagram.com/sarrah_aliasgar/">
                           {" "}
-                          Created by Sarrah Bharmal{" "}
+                          Writtern by Sarrah Bharmal{" "}
                         </a>
                       </h1>
                       <p className="text-sm text-gray-500"> {blog.category}</p>
@@ -205,9 +211,11 @@ const Slug = ({ blog, blogs}) => {
 
                       <Link
                         href={"/blog/" + item.slug.current}
-                        className="block mt-2 font-medium text-gray-700 hover:text-black-500 "
+                        className="block mt-2 font-medium text-gray-700 hover:text-black-500"
                       >
-                        {item.metadesc}
+                        <span className="underline cursor-pointer">
+                          {item.metadesc}
+                        </span>
                       </Link>
                       <hr className="my-6 border-gray-200 dark:border-gray-700" />
                     </div>
@@ -232,7 +240,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "2.1rem",
+                            fontSize: "2.3rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -244,7 +252,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1.7rem",
+                            fontSize: "1.9rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -256,7 +264,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem",
                             marginBottom: "0.1rem",
-                            fontSize: "1.4rem",
+                            fontSize: "1.6rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -268,7 +276,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1.2rem",
+                            fontSize: "1.4rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -280,7 +288,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "1rem",
+                            fontSize: "1.2rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -292,7 +300,7 @@ const Slug = ({ blog, blogs}) => {
                           style={{
                             marginTop: "1rem ",
                             marginBottom: "0.1rem",
-                            fontSize: "0.8rem",
+                            fontSize: "1rem",
                             fontWeight: "bold",
                             color: "blueviolet",
                           }}
@@ -307,8 +315,12 @@ const Slug = ({ blog, blogs}) => {
                 </div>
                 <div className="text-sm text-indigo-600 mt-5">
                   Your question not answered ? Try sending us your{" "}
-                  <Link href="/queries"><span className="text-pink-500 font-bold cursor-pointer">feedback/query</span></Link> we will
-                  try to answer it very soon
+                  <Link href="/queries">
+                    <span className="text-pink-500 font-bold cursor-pointer">
+                      feedback/query
+                    </span>
+                  </Link>{" "}
+                  we will try to answer it very soon
                 </div>
               </div>
             </div>

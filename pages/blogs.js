@@ -51,7 +51,7 @@ const Blogs = ({ blogs, faqs }) => {
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></Script>
       <section className="bg-white lg:px-28 ">
         <div className="md:flex w-full md:justify-start justify-center items-end mt-7 mx-5">
@@ -93,7 +93,10 @@ const Blogs = ({ blogs, faqs }) => {
               </div>
               {blogs.map((item) => {
                 return (
-                  <div key={item.slug.current} className="mb-16 mt-10 blog-div ml-5 md:px-10">
+                  <div
+                    key={item.slug.current}
+                    className="mb-16 mt-10 blog-div ml-5 md:px-10"
+                  >
                     <div
                       className=" w-full h-80 xl:h-[28rem] rounded-xl bg-no-repeat bg-contain"
                       style={{
@@ -123,7 +126,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem ",
                                 marginBottom: "0.1rem",
-                                fontSize: "2.1rem",
+                                fontSize: "2.3rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -133,7 +137,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem ",
                                 marginBottom: "0.1rem",
-                                fontSize: "1.7rem",
+                                fontSize: "1.9rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -143,7 +148,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem",
                                 marginBottom: "0.1rem",
-                                fontSize: "1.4rem",
+                                fontSize: "1.6rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -153,7 +159,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem ",
                                 marginBottom: "0.1rem",
-                                fontSize: "1.2rem",
+                                fontSize: "1.4rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -163,7 +170,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem ",
                                 marginBottom: "0.1rem",
-                                fontSize: "1rem",
+                                fontSize: "1.2rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -173,7 +181,8 @@ const Blogs = ({ blogs, faqs }) => {
                               style={{
                                 marginTop: "1rem ",
                                 marginBottom: "0.1rem",
-                                fontSize: "0.8rem",
+                                fontSize: "1rem",
+                                fontWeight: "bold",
                               }}
                               {...props}
                             />
@@ -199,7 +208,7 @@ const Blogs = ({ blogs, faqs }) => {
                           <h1 className="text-sm text-indigo-700">
                             <a href="https://www.instagram.com/sarrah_aliasgar/">
                               {" "}
-                              Created by Sarrah Bharmal{" "}
+                              Written by Sarrah Bharmal{" "}
                             </a>
                           </h1>
                           <p className="text-sm text-gray-500">
@@ -230,7 +239,9 @@ const Blogs = ({ blogs, faqs }) => {
                         href={"/blog/" + item.slug.current}
                         className="block mt-2 font-medium text-gray-700 hover:text-black-500 "
                       >
-                        {item.metadesc}
+                        <span className="underline cursor-pointer">
+                          {item.metadesc}
+                        </span>
                       </Link>
                       <hr className="my-6 border-gray-200 dark:border-gray-700" />
                     </div>

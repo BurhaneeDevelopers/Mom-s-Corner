@@ -14,7 +14,7 @@ const Queries = ({ faqs }) => {
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></Script>
       <section className="min-h-screen bg-white">
         <div className="container px-6 lg:px-28 py-10 mx-auto">
