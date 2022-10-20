@@ -23,6 +23,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Mom&apos;s Corner - The best guide for moms</title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossOrigin="anonymous"
+        ></script>
+        <meta
+          name="google-site-verification"
+          content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
+        />
         <meta
           name="description"
           content="Mommscorner.com is a website dedicated to moms, moms-to-be, and families. With articles on parenting, family life, and health."
@@ -32,22 +41,6 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="mommscorner, moms corner, mom corner, momo, momos, parenting, mom, baby health, children health, mother health, pregnancy health, maternal health, pregnancy symptoms, baby, postpartum, mom guide"
         />
-        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-          rel="stylesheet"
-        ></link>
-        <meta
-          name="google-site-verification"
-          content="PD1qjR5OecZPYeiKxb0xIjC0DO3EJTIEEPIWCkpd4Mg"
-        />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <LoadingBar
         color="#ce1f7e"

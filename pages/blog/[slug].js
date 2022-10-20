@@ -2,7 +2,6 @@ import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import { FaTelegramPlane } from "react-icons/fa";
 import imageUrlBuilder from "@sanity/image-url";
-import Script from "next/script";
 import Link from "next/link";
 
 const Slug = ({ blog, blogs }) => {
@@ -16,11 +15,6 @@ const Slug = ({ blog, blogs }) => {
 
   return (
     <>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossOrigin="anonymous"
-      ></Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
