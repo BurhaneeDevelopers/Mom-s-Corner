@@ -88,7 +88,7 @@ export default function Example() {
           >
             <Link href={'/'} className="cursor-pointer">
             <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <Image src="/logo.png" className="md:w-48" width={200} height={120} alt="Logo" />
+              <Image src="/logo.png" className="md:w-48" width={200} height={120} priority alt="Mommscorner" />
             </div>
             </Link>
           </Typography>
