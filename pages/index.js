@@ -668,6 +668,7 @@ export default function Home({ blogs }) {
                 src="/hero-img.png"
                 width={500}
                 height={500}
+                priority 
               />
             </div>
           </div>
