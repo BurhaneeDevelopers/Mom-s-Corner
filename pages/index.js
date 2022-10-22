@@ -703,6 +703,7 @@ export default function Home({ blogs }) {
                       alt="Mom's corner"
                       width={150}
                       height={100}
+                      priority 
                     />
                   </span>
 
