@@ -6,14 +6,7 @@ import {
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import {
-  Button,
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-} from "@material-tailwind/react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { SiBuymeacoffee } from "react-icons/si";
 import { BsWhatsapp, BsArrowRight } from "react-icons/bs";
 import { createClient } from "next-sanity";
@@ -45,7 +38,7 @@ export default function Home({ blogs }) {
       <label htmlFor="my-modal-1" className="modal cursor-pointer">
         <label
           className="modal-box relative bg-pink-200 w-11/12 max-w-5xl"
-         htmlFor=""
+          htmlFor=""
         >
           <label
             htmlFor="my-modal-1"
@@ -260,8 +253,8 @@ export default function Home({ blogs }) {
             </ul>
 
             <p className="mb-5">
-              No use of Mom&apos;s Corner logo or other artwork will be
-              allowed for linking absent a trademark license agreement.
+              No use of Mom&apos;s Corner logo or other artwork will be allowed
+              for linking absent a trademark license agreement.
             </p>
 
             <h3 className="text-lg font-bold mb-2">
@@ -374,7 +367,7 @@ export default function Home({ blogs }) {
       <label htmlFor="my-modal-2" className="modal cursor-pointer">
         <label
           className="modal-box relative bg-pink-200 w-11/12 max-w-5xl"
-         htmlFor=""
+          htmlFor=""
         >
           <label
             htmlFor="my-modal-2"
@@ -594,7 +587,9 @@ export default function Home({ blogs }) {
               would like to exercise any of these rights, please contact us.
             </li>
 
-            <h2 className="text-xl font-bold mb-2">Children&apos;s Information</h2>
+            <h2 className="text-xl font-bold mb-2">
+              Children&apos;s Information
+            </h2>
 
             <p className="mb-2">
               Another part of our priority is adding protection for children
@@ -752,6 +747,14 @@ export default function Home({ blogs }) {
                 </div>
               );
             })}
+          </div>
+          <div className="flex justify-center mt-10">
+            <button className="btn bg-indigo-600 hover:bg-indigo-800 rounded-md border-0 my-auto">
+              See All Blogs{" "}
+              <span className="ml-3 -mt-[0.2rem]">
+                <BsArrowRight className="text-xl"/>
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -926,7 +929,7 @@ export async function getServerSideProps(context) {
     apiVersion: "2021-10-21",
     useCdn: false,
   });
-  const query = `*[_type == "blog"]`;
+  const query = `*[_type == "blog"][0..5]`;
   const blogs = await client.fetch(query);
   return {
     props: {
