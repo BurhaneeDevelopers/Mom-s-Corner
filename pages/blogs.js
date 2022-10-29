@@ -1,12 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import PortableText from "react-portable-text";
+import getYouTubeId from "get-youtube-id";
+import YouTube from "react-youtube";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { AiOutlineSearch } from "react-icons/ai";
 import Script from "next/script";
 import Link from "next/link";
 
+// const serializers = {
+//   types: {
+//     youtube: ({ node }) => {
+//       const { url } = node;
+//       const id = getYouTubeId(url);
+//       return <YouTube videoId={id} />;
+//     },
+//   },
+// };
 const Blogs = ({ blogs, faqs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
@@ -54,19 +65,19 @@ const Blogs = ({ blogs, faqs }) => {
         crossOrigin="anonymous"
       ></Script>
       <section className="bg-white lg:px-28 ">
-        <div className="md:flex w-full md:justify-start justify-center items-end mt-7 mx-5">
-          <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0">
+        <div className="md:flex md:justify-start justify-center items-end mt-7 mx-5">
+          <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0 flex flex-col">
             <label
               htmlFor="hero-field"
-              className="leading-7 text-sm md:text-lg text-indigo-600"
+              className="leading-7 text-sm md:text-lg text-indigo-600 mb-2"
             >
               Search anything here :)
             </label>
             <input
               type="search"
               id="search-input"
-              placeholder="Search Anything You Want !"
-              className="w-full mt-2 bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Search Anything !"
+              className="w-1/2 mt-2 bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-pink-200 focus:bg-transparent focus:border-pink-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
 
@@ -116,7 +127,7 @@ const Blogs = ({ blogs, faqs }) => {
                       </h1>
 
                       <PortableText
-                        className="portabletext text-justify"
+                        className="portabletext text-justify text-xl"
                         content={item.content}
                         projectId="r6hwcp84"
                         dataset="production"
@@ -216,6 +227,10 @@ const Blogs = ({ blogs, faqs }) => {
                             {item.category}
                           </p>
                         </div>
+                        {/* <PortableText
+                          blocks={blocks}
+                          serializers={serializers}
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -229,17 +244,17 @@ const Blogs = ({ blogs, faqs }) => {
               <h1 className="text-indigo-700 text-3xl mb-10">Related Blogs</h1>
               {blogs.map((item) => {
                 return (
-                  <div key={item.slug.title} className="flex mb-5">
+                  <div key={item.slug.current} className="flex mb-5">
                     <div>
-                      <h3 className="text-indigo-500 capitalize">
+                      <h2 className="text-indigo-500 capitalize text-xl mb-3">
                         {item.title}
-                      </h3>
+                      </h2>
 
                       <Link
                         href={"/blog/" + item.slug.current}
-                        className="block mt-2 font-medium text-gray-700 hover:text-black-500 "
+                        className="block font-medium"
                       >
-                        <span className="underline cursor-pointer">
+                        <span className="underline cursor-pointer text-lg text-gray-700 hover:text-black-500">
                           {item.metadesc}
                         </span>
                       </Link>

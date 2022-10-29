@@ -39,7 +39,7 @@ const Slug = ({ blog, blogs }) => {
                     {blog.title}
                   </h1>
                   <PortableText
-                    className="portabletext text-justify"
+                    className="portabletext text-justify text-xl"
                     content={blog.content}
                     projectId="r6hwcp84"
                     dataset="production"
@@ -199,15 +199,15 @@ const Slug = ({ blog, blogs }) => {
                 return (
                   <div key={item.slug.title} className="flex mb-5">
                     <div>
-                      <h3 className="text-indigo-500 capitalize">
+                      <h3 className="text-indigo-500 capitalize mb-3">
                         {item.title}
                       </h3>
 
                       <Link
                         href={"/blog/" + item.slug.current}
-                        className="block mt-2 font-medium text-gray-700 hover:text-black-500"
+                        className="block font-medium"
                       >
-                        <span className="underline cursor-pointer">
+                        <span className="underline cursor-pointer text-lg text-gray-700 hover:text-black-500">
                           {item.metadesc}
                         </span>
                       </Link>
