@@ -25,7 +25,7 @@ const Slug = ({ blog, blogs }) => {
                   style={{
                     backgroundImage: `url(${builder
                       .image(blog.blogimage)
-                      .width(200)
+                      .width(500)
                       .url()})`,
                   }}
                 ></div>

@@ -113,7 +113,7 @@ const Blogs = ({ blogs, faqs }) => {
                       style={{
                         backgroundImage: `url(${builder
                           .image(item.blogimage)
-                          .width(200)
+                          .width(500)
                           .url()})`,
                       }}
                     ></div>
