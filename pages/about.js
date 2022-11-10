@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import Head from "next/head";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import imageUrlBuilder from "@sanity/image-url";
@@ -18,6 +19,10 @@ const About = ({ about }) => {
 
   return (
     <>
+    <Head>
+      <title>Mom&apos;s Corner - About Us</title>
+      <meta name="description" content="Learn everything about mommscorner.com and me. Explore what our aim is and what we are providing" />
+    </Head>
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"

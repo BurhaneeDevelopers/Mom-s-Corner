@@ -6,11 +6,15 @@ import { SiBuymeacoffee } from "react-icons/si";
 import { BsWhatsapp } from "react-icons/bs";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
-import imageUrlBuilder from "@sanity/image-url";
+import Head from "next/head";
 
 const Queries = ({ faqs }) => {
   return (
     <>
+    <Head>
+      <title>Mom&apos;s Corner - Help/Queries</title>
+      <meta name="description" content="Get your doubts clear related to parenting and life after pregnancy" />
+    </Head>
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
