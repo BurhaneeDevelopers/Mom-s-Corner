@@ -1,23 +1,27 @@
 import React from "react";
 import Image from "next/image";
 import PortableText from "react-portable-text";
-import getYouTubeId from "get-youtube-id";
-import YouTube from "react-youtube";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineLink } from "react-icons/ai";
 import Script from "next/script";
 import Link from "next/link";
+import Head from "next/head";
+import {
+  EmailIcon,
+  FacebookIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
 
-// const serializers = {
-//   types: {
-//     youtube: ({ node }) => {
-//       const { url } = node;
-//       const id = getYouTubeId(url);
-//       return <YouTube videoId={id} />;
-//     },
-//   },
-// };
 const Blogs = ({ blogs, faqs }) => {
   const client = createClient({
     projectId: "r6hwcp84",
@@ -57,8 +61,22 @@ const Blogs = ({ blogs, faqs }) => {
     }
   };
 
+  // -----COPY THE POST URL FUNCTION-----
+  const shareUrl = () => {
+    let copyText = document.getElementById("posturl");
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the Url: " + copyText.value);
+  };
+  // -----COPY THE POST URL FUNCTION-----
   return (
     <>
+      <Head>
+        <title>Mom&apos;s Corner - The best guide for moms</title>
+      </Head>
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
@@ -204,6 +222,52 @@ const Blogs = ({ blogs, faqs }) => {
                         }}
                       />
 
+                      <div className="flex space-x-5 mt-5">
+                        <FacebookShareButton
+                          url={item.posturl}
+                          quote={item.title}
+                        >
+                          <FacebookIcon size={32} round />
+                        </FacebookShareButton>
+
+                        <WhatsappShareButton
+                          url={item.posturl}
+                          quote={item.title}
+                        >
+                          <WhatsappIcon size={32} round />
+                        </WhatsappShareButton>
+
+                        <EmailShareButton url={item.posturl} quote={item.title}>
+                          <EmailIcon size={32} round />
+                        </EmailShareButton>
+
+                        <TelegramShareButton
+                          url={item.posturl}
+                          quote={item.title}
+                        >
+                          <TelegramIcon size={32} round />
+                        </TelegramShareButton>
+
+                        <TwitterShareButton
+                          url={item.posturl}
+                          quote={item.title}
+                        >
+                          <TwitterIcon size={32} round />
+                        </TwitterShareButton>
+
+                        <span>
+                          <button
+                            onClick={shareUrl}
+                            value={item.posturl}
+                            id="posturl"
+                            className="bg-green-400 p-2 rounded-full text-white"
+                            url={item.posturl}
+                          >
+                            <AiOutlineLink />
+                          </button>
+                        </span>
+                      </div>
+
                       <div className="items-start mt-6">
                         {/* <div
                           className="bg-cover w-12 h-12 rounded-full"
@@ -214,7 +278,6 @@ const Blogs = ({ blogs, faqs }) => {
                               .url()})`,
                           }}
                         ></div> */}
-
                         <div className="">
                           <h1 className="text-sm text-indigo-700">
                             <a href="https://www.instagram.com/sarrah_aliasgar/">

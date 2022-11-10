@@ -1,8 +1,24 @@
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import { FaTelegramPlane } from "react-icons/fa";
+import { AiOutlineLink } from "react-icons/ai";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
+import Head from "next/head";
+import {
+  EmailIcon,
+  FacebookIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
 
 const Slug = ({ blog, blogs }) => {
   const client = createClient({
@@ -13,8 +29,23 @@ const Slug = ({ blog, blogs }) => {
   });
   const builder = imageUrlBuilder(client);
 
+  // -----COPY THE POST URL FUNCTION-----
+  const shareUrl = () => {
+    let copyText = document.getElementById("posturl");
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the Url: " + copyText.value);
+  };
+  // -----COPY THE POST URL FUNCTION-----
+
   return (
     <>
+      <Head>
+        <title>{blog.title}</title>
+      </Head>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
@@ -118,9 +149,40 @@ const Slug = ({ blog, blogs }) => {
                       ),
                     }}
                   />
-                  <div className="flex items-center mt-6">
-                    {/* gi */}
+                  <div className="flex space-x-5 mt-5">
+                    <FacebookShareButton url={blog.posturl} quote={blog.title}>
+                      <FacebookIcon size={32} round />
+                    </FacebookShareButton>
 
+                    <WhatsappShareButton url={blog.posturl} quote={blog.title}>
+                      <WhatsappIcon size={32} round />
+                    </WhatsappShareButton>
+
+                    <EmailShareButton url={blog.posturl} quote={blog.title}>
+                      <EmailIcon size={32} round />
+                    </EmailShareButton>
+
+                    <TelegramShareButton url={blog.posturl} quote={blog.title}>
+                      <TelegramIcon size={32} round />
+                    </TelegramShareButton>
+
+                    <TwitterShareButton url={blog.posturl} quote={blog.title}>
+                      <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+
+                    <span>
+                      <button
+                        onClick={shareUrl}
+                        value={blog.posturl}
+                        id="posturl"
+                        className="bg-green-400 p-2 rounded-full text-white"
+                        url={blog.posturl}
+                      >
+                        <AiOutlineLink />
+                      </button>
+                    </span>
+                  </div>
+                  <div className="flex items-center mt-6">
                     <div className="">
                       <h1 className="text-sm text-start text-indigo-700">
                         <a href="https://www.instagram.com/sarrah_aliasgar/">
