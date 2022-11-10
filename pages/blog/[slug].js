@@ -45,6 +45,8 @@ const Slug = ({ blog, blogs }) => {
     <>
       <Head>
         <title>{blog.title}</title>
+        <meta name="keywords" content={blog.title} />
+        <meta name="description" content={blog.metadesc} />
       </Head>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
@@ -149,6 +151,7 @@ const Slug = ({ blog, blogs }) => {
                       ),
                     }}
                   />
+
                   <div className="flex space-x-5 mt-5">
                     <FacebookShareButton url={blog.posturl} quote={blog.title}>
                       <FacebookIcon size={32} round />
