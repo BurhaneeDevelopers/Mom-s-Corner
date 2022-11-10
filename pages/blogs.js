@@ -88,8 +88,8 @@ const Blogs = ({ blogs, faqs }) => {
             <AiOutlineSearch className="mt-1" /> <span>&nbsp;</span> Search
           </button>
         </div>
-        <div className="py-10">
-          <div className="lg:flex lg:-mx-6 ">
+        <div className="container px-6 py-10">
+          <div className="lg:flex lg:-mx-6">
             <div className="lg:w-3/4 max-h-[100vh] p-5 md:p-0 overflow-y-auto blog-scroll">
               <div
                 className="mt-5 hidden text-center align-middle text-red-400 font-bold"

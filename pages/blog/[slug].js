@@ -32,7 +32,7 @@ const Slug = ({ blog, blogs }) => {
 
                 <div>
                   <p className="mt-6 text-sm text-indigo-500 uppercase">
-                    Updated By Sarrah Bharmal on {blog.CreatedAt}
+                    Created By Sarrah Bharmal on {blog.CreatedAt}
                   </p>
 
                   <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
