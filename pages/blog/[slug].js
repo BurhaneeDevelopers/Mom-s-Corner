@@ -113,6 +113,9 @@ const Slug = ({ blog, blogs }) => {
                       li: ({ children }) => (
                         <li className="list-disc ml-7 mb-1">{children}</li>
                       ),
+                      a: ({ children }) => (
+                        <a className="underline text-indigo-500">{children}</a>
+                      ),
                     }}
                   />
                   <div className="flex items-center mt-6">
