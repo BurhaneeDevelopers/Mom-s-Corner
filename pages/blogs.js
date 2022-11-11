@@ -69,7 +69,7 @@ const Blogs = ({ blogs, faqs }) => {
     navigator.clipboard.writeText(copyText.value);
 
     // Alert the copied text
-    alert("Copied the Url: " + copyText.value);
+    alert("You have sucessfully copied: " + copyText.value);
   };
   // -----COPY THE POST URL FUNCTION-----
   return (
