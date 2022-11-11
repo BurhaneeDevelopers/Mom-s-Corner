@@ -2,6 +2,7 @@ import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
 import { FaTelegramPlane } from "react-icons/fa";
 import { AiOutlineLink } from "react-icons/ai";
+import { ImLink } from "react-icons/im";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
 import Head from "next/head";
@@ -152,6 +153,12 @@ const Slug = ({ blog, blogs }) => {
                     }}
                   />
 
+                  <div className="mt-5">
+                    <h4 className="text-4xl text-indigo-800 flex">
+                      Share with your friends&nbsp;
+                      <AiOutlineLink className="my-auto" />
+                    </h4>
+                  </div>
                   <div className="flex space-x-5 mt-5">
                     <FacebookShareButton url={blog.posturl} quote={blog.title}>
                       <FacebookIcon size={32} round />

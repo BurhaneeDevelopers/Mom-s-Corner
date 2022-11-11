@@ -222,6 +222,12 @@ const Blogs = ({ blogs, faqs }) => {
                         }}
                       />
 
+                      <div className="mt-5">
+                        <h4 className="text-4xl text-indigo-800 flex">
+                          Share with your friends&nbsp;
+                          <AiOutlineLink className="my-auto" />
+                        </h4>
+                      </div>
                       <div className="flex space-x-5 mt-5">
                         <FacebookShareButton
                           url={item.posturl}
