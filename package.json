@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/text-to-speech": "^4.0.4",
     "@material-tailwind/react": "^1.2.4",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.4.1",

@@ -48,6 +48,11 @@ const Slug = ({ blog, blogs }) => {
         <title>{blog.title}</title>
         <meta name="keywords" content={blog.title} />
         <meta name="description" content={blog.metadesc} />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">

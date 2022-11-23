@@ -11,10 +11,18 @@ import Head from "next/head";
 const Queries = ({ faqs }) => {
   return (
     <>
-    <Head>
-      <title>Mom&apos;s Corner - Help/Queries</title>
-      <meta name="description" content="Get your doubts clear related to parenting and life after pregnancy" />
-    </Head>
+      <Head>
+        <title>Mom&apos;s Corner - Help/Queries</title>
+        <meta
+          name="description"
+          content="Get your doubts clear related to parenting and life after pregnancy"
+        />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
@@ -100,7 +108,6 @@ const Queries = ({ faqs }) => {
                   ></Image>
                 </div>
                 <div className="mt-6 space-y-8 md:mt-8">
-
                   <p className="flex items-start -mx-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

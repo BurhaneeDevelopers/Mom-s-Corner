@@ -19,10 +19,18 @@ const About = ({ about }) => {
 
   return (
     <>
-    <Head>
-      <title>Mom&apos;s Corner - About Us</title>
-      <meta name="description" content="Learn everything about mommscorner.com and me. Explore what our aim is and what we are providing" />
-    </Head>
+      <Head>
+        <title>Mom&apos;s Corner - About Us</title>
+        <meta
+          name="description"
+          content="Learn everything about mommscorner.com and me. Explore what our aim is and what we are providing"
+        />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"

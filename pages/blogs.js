@@ -76,6 +76,8 @@ const Blogs = ({ blogs, faqs }) => {
     <>
       <Head>
         <title>Mom&apos;s Corner - The best guide for moms</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+     crossorigin="anonymous"></script>
       </Head>
       <Script
         async
