@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
         <meta rel="conanical" content="https://mommscorner.com/blogs" />
         <meta
           name="keywords"
-          content="breakfast, works, mommscorner, moms corner, mom corner, parenting, mom, baby health, children health, mother health, pregnancy health, maternal health, pregnancy symptoms, baby, postpartum, mom guide"
+          content="breakfast, parenting, mommscorner, moms corner, mom corner, parenting, mom, child health, mother health, pregnancy, maternal health, pregnancy symptoms, baby, postpartum acne, postpartum belly, mom guide"
         />
       </Head>
       <LoadingBar
