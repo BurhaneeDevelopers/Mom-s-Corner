@@ -82,11 +82,7 @@ const Blogs = ({ blogs, faqs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossOrigin="anonymous"
-      ></Script>
+      <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
       <section className="bg-white lg:px-28 ">
         <div className="md:flex md:justify-start justify-center items-end mt-7 mx-5">
           <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0 flex flex-col">
@@ -140,23 +136,16 @@ const Blogs = ({ blogs, faqs }) => {
                           .url()})`,
                       }}
                     ></div>
-                    <script
-                      async
-                      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-                      crossorigin="anonymous"
-                    ></script>
                     {/* <!-- in-between-article-ad --> */}
-                    <ins
-                      class="adsbygoogle"
-                      style="display:block"
-                      data-ad-client="ca-pub-5575076125990523"
-                      data-ad-slot="5865441941"
-                      data-ad-format="auto"
-                      data-full-width-responsive="true"
-                    ></ins>
-                    <script>
-                      (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    <div className="">
+                      <ins
+                        className="adsbygoogle block"
+                        data-ad-client="ca-pub-5575076125990523"
+                        data-ad-slot="5865441941"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"
+                      ></ins>
+                    </div>
                     <div>
                       <p className="mt-6 text-sm text-indigo-500 uppercase">
                         Created By Sarrah Bharmal on {item.CreatedAt}

@@ -1,5 +1,6 @@
 import PortableText from "react-portable-text";
 import { createClient } from "next-sanity";
+import Script from "next/script";
 import { FaTelegramPlane } from "react-icons/fa";
 import { AiOutlineLink } from "react-icons/ai";
 import { ImLink } from "react-icons/im";
@@ -54,6 +55,7 @@ const Slug = ({ blog, blogs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
+      <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
@@ -68,23 +70,16 @@ const Slug = ({ blog, blogs }) => {
                       .url()})`,
                   }}
                 ></div>
-                <script
-                  async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-                  crossorigin="anonymous"
-                ></script>
                 {/* <!-- in-between-article-ad --> */}
-                <ins
-                  class="adsbygoogle"
-                  style="display:block"
-                  data-ad-client="ca-pub-5575076125990523"
-                  data-ad-slot="5865441941"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
-                <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <div>
+                  <ins
+                    className="adsbygoogle block"
+                    data-ad-client="ca-pub-5575076125990523"
+                    data-ad-slot="5865441941"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"
+                  ></ins>
+                </div>
                 <div>
                   <p className="mt-6 text-sm text-indigo-500 uppercase">
                     Created By Sarrah Bharmal on {blog.CreatedAt}
