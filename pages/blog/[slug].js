@@ -55,7 +55,7 @@ const Slug = ({ blog, blogs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+      <Script id="ad-script">(adsbygoogle = window.adsbygoogle || []).push({});</Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">

@@ -82,7 +82,7 @@ const Blogs = ({ blogs, faqs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+      <Script id="ad-script">(adsbygoogle = window.adsbygoogle || []).push({});</Script>
       <section className="bg-white lg:px-28 ">
         <div className="md:flex md:justify-start justify-center items-end mt-7 mx-5">
           <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0 flex flex-col">
