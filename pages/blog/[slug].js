@@ -55,7 +55,9 @@ const Slug = ({ blog, blogs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script id="ad-script">(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+      <Script id="ad-script">
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </Script>
       <section className="bg-white lg:px-28">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:-mx-6">
@@ -70,16 +72,6 @@ const Slug = ({ blog, blogs }) => {
                       .url()})`,
                   }}
                 ></div>
-                {/* <!-- in-between-article-ad --> */}
-                <div>
-                  <ins
-                    className="adsbygoogle block"
-                    data-ad-client="ca-pub-5575076125990523"
-                    data-ad-slot="5865441941"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"
-                  ></ins>
-                </div>
                 <div>
                   <p className="mt-6 text-sm text-indigo-500 uppercase">
                     Created By Sarrah Bharmal on {blog.CreatedAt}
@@ -88,6 +80,16 @@ const Slug = ({ blog, blogs }) => {
                   <h1 className="max-w-lg mt-4 text-4xl font-semibold leading-tight text-gray-800">
                     {blog.title}
                   </h1>
+                  {/* <!-- in-between-article-ad --> */}
+                  <div>
+                    <ins
+                      className="adsbygoogle block"
+                      data-ad-client="ca-pub-5575076125990523"
+                      data-ad-slot="5865441941"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"
+                    ></ins>
+                  </div>
                   <PortableText
                     className="portabletext text-justify text-xl"
                     content={blog.content}
