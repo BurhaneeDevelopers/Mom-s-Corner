@@ -54,6 +54,11 @@ function MyApp({ Component, pageProps }) {
       <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3" />
       <Component {...pageProps} />
       <Footer />
+      <Script
+        async
+        src="https://fundingchoicesmessages.google.com/i/pub-5575076125990523?ers=1"
+        nonce="QywnPGFEZEYwYMJUnATjGw"
+      ></Script>
     </>
   );
 }

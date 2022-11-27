@@ -76,8 +76,11 @@ const Blogs = ({ blogs, faqs }) => {
     <>
       <Head>
         <title>Mom&apos;s Corner - The best guide for moms</title>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-     crossorigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <Script
         async
@@ -137,6 +140,23 @@ const Blogs = ({ blogs, faqs }) => {
                           .url()})`,
                       }}
                     ></div>
+                    <script
+                      async
+                      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
+                      crossorigin="anonymous"
+                    ></script>
+                    {/* <!-- in-between-article-ad --> */}
+                    <ins
+                      class="adsbygoogle"
+                      style="display:block"
+                      data-ad-client="ca-pub-5575076125990523"
+                      data-ad-slot="5865441941"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"
+                    ></ins>
+                    <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                     <div>
                       <p className="mt-6 text-sm text-indigo-500 uppercase">
                         Created By Sarrah Bharmal on {item.CreatedAt}
