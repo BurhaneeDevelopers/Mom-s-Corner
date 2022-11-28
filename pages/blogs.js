@@ -82,9 +82,6 @@ const Blogs = ({ blogs, faqs }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <Script id="ad-script">
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </Script>
       <section className="bg-white lg:px-28 ">
         <div className="md:flex md:justify-start justify-center items-end mt-7 mx-5">
           <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 mb-2 md:mb-0 flex flex-col">
@@ -146,16 +143,6 @@ const Blogs = ({ blogs, faqs }) => {
                       <h1 className="mt-4 text-5xl leading-tight text-gray-800 blog-title">
                         {item.title}
                       </h1>
-                      {/* <!-- in-between-article-ad --> */}
-                      <div className="">
-                        <ins
-                          className="adsbygoogle block"
-                          data-ad-client="ca-pub-5575076125990523"
-                          data-ad-slot="5865441941"
-                          data-ad-format="auto"
-                          data-full-width-responsive="true"
-                        ></ins>
-                      </div>
                       <PortableText
                         className="portabletext text-justify text-xl"
                         content={item.content}
