@@ -81,7 +81,7 @@ export default function Home({ blogs }) {
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-cover bg-center rounded -mt-10">
               <Image
                 className="object-cover object-top rounded "
-                alt="hero"
+                alt="mom"
                 src="/hero-img.png"
                 width={500}
                 height={500}

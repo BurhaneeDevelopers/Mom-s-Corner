@@ -98,6 +98,7 @@ const Queries = ({ faqs }) => {
                 <div className="sm:flex md:hidden lg:flex">
                   <Image
                     src="/sarrah-profile.jpeg"
+                    alt="profile"
                     width="400"
                     height="400"
                     className="rounded-full object-cover object-top"
