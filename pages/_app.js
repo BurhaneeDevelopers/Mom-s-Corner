@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
           crossOrigin="anonymous"
+          loading="lazy"
         ></script>
         <meta
           name="google-site-verification"
@@ -51,7 +52,7 @@ function MyApp({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <Navbar />
-      <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3" />
+      <GoogleAnalytics gaMeasurementId="G-6ECHNL4VF3" loading="lazy"/>
       <Component {...pageProps} />
       <Footer />
       <Script

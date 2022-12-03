@@ -34,6 +34,7 @@ export default function Home({ blogs }) {
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
         crossOrigin="anonymous"
+        loading="lazy"
       ></Script>
       <div className="main bg-gradient-to-r from-pink-300 to-pink-200">
         <section className="text-gray-600 body-font px-5 mx-10">

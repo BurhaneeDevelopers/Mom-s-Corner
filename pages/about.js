@@ -29,13 +29,9 @@ const About = ({ about }) => {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
           crossorigin="anonymous"
+          loading="lazy"
         ></script>
       </Head>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
-        crossOrigin="anonymous"
-      ></Script>
       <header className="bg-gradient-to-r from-pink-300 to-pink-200">
         <div className="container px-6 lg:px-12 py-16 mx-auto">
           <div className="items-center lg:flex lg:ml-28">

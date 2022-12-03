@@ -80,6 +80,7 @@ const Blogs = ({ blogs, faqs }) => {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5575076125990523"
           crossorigin="anonymous"
+          loading="lazy"
         ></script>
       </Head>
       <section className="bg-white lg:px-28 ">
