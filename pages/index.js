@@ -86,6 +86,7 @@ export default function Home({ blogs }) {
                 width={500}
                 height={500}
                 priority
+                loading="eager"
               />
             </div>
           </div>
