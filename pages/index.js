@@ -120,7 +120,7 @@ export default function Home({ blogs }) {
                       src="/logo.png"
                       alt="Mom's corner"
                       width={150}
-                      height={100}
+                      height={150}
                       priority
                     />
                   </span>
