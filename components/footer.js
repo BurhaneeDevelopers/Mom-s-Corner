@@ -5,8 +5,10 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div>
-      <footer className="flex flex-col items-center justify-center bg-gradient-to-r from-pink-300 to-pink-200
-       sm:flex-row">
+      <footer
+        className="flex flex-col items-center justify-center bg-gradient-to-r from-pink-300 to-pink-200
+       sm:flex-row"
+      >
         <Link href="/" className="text-sm">
           <Image src="/logo.png" alt="logo" width={180} height={120} />
         </Link>
@@ -15,6 +17,18 @@ const Footer = () => {
           © Copyright Mom&apos;s Corner. All Rights Reserved.
         </p>
       </footer>
+      <a
+        href="https://www.producthunt.com/posts/momms-corner?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-momms&#0045;corner"
+        target="_blank"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=370568&theme=light"
+          alt="Momms&#0032;Corner - Best&#0032;Parenting&#0032;Guide&#0032;For&#0032;Your&#0032;Child | Product Hunt"
+          className="fixed bottom-10 right-10"
+          width="250"
+          height="54"
+        />
+      </a>
     </div>
   );
 };
