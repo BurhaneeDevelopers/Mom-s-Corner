@@ -20,6 +20,7 @@ const Footer = () => {
       <a
         href="https://www.producthunt.com/posts/momms-corner?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-momms&#0045;corner"
         target="_blank"
+        rel="noreferrer noopener"
       >
         <img
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=370568&theme=light"
