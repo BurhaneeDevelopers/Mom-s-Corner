@@ -14,7 +14,10 @@ const Footer = () => {
         </Link>
 
         <p className="text-sm text-start text-gray-600">
-          © Copyright Mom&apos;s Corner. All Rights Reserved.
+          © Copyright Mom&apos;s Corner. All Rights Reserved.{" "}
+          <span>
+            Crafted with &#10084; by <a href="//taheridevelopers.com" target="_blank" rel="noreferrer noopener" className="text-indigo-700 hover:underline">Taheri Developers</a>
+          </span>
         </p>
       </footer>
       <a
